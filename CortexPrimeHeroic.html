@@ -66,561 +66,553 @@
 	<hr>
 </div><!-- Dice Bar close --> 
 <div class='sheet-prime-core'>
+	<h3>Name</h3>
+	<input type="text" name="attr_character_name" />
+	<br />
+
+	<h3>Affiliations</h3>
+	<label for="attr_Solo">Solo:</label>
+		<select name="attr_Solo" id="attr_Solo" placeholder="d6">
+			<option value="d4">d4</option>
+			<option value="d6">d6</option>
+			<option value="d8">d8</option>
+			<option value="d10">d10</option>
+			<option value="d12">d12</option>
+		</select>
+		<button	type="roll" 
+			class="blank-roll-button" 
+			value="!setattr --silent --name @{character_name} --mod --@{Solo}|1">
+		ADD
+		</button>
+
+	<label for="attr_Buddy">Buddy:</label>
+		<select name="attr_Buddy" id="attr_Buddy" placeholder="d8">
+			<option value="d4">d4</option>
+			<option value="d6">d6</option>
+			<option value="d8">d8</option>
+			<option value="d10">d10</option>
+			<option value="d12">d12</option>
+		</select>
+		<button	type="roll" 
+			class="blank-roll-button" 
+			value="!setattr --silent --name @{character_name} --mod --@{Buddy}|1">
+		ADD
+		</button>
+
+	<label for="attr_Team">Team:</label>
+		<select name="attr_Team" id="attr_Team" placeholder="d10">
+			<option value="d4">d4</option>
+			<option value="d6">d6</option>
+			<option value="d8">d8</option>
+			<option value="d10">d10</option>
+			<option value="d12">d12</option>
+		</select>
+		<button	type="roll" 
+			class="blank-roll-button" 
+			value="!setattr --silent --name @{character_name} --mod --@{Team}|1" >
+		ADD
+		</button>
+		<br />
+
+	<h3>Skills</h3>
 	<div class="sheet-2colrow">
-
-		<div class="sheet-col">
-			
-			<h3>Name</h3>
-			<input type="text" name="attr_character_name" />
-			<br />
-
-			<h3>Attributes</h3>
-			<label for="attr_Physical">Physical:</label>
-				<select name="attr_Physical" id="attr_Physical" placeholder="d4">
-					<option value="d4">d4</option>
-					<option value="d6">d6</option>
-					<option value="d8">d8</option>
-					<option value="d10">d10</option>
-					<option value="d12">d12</option>
-				</select>
-				<button	type="roll" 
-					class="blank-roll-button" 
-					value="!setattr --silent --name @{character_name} --mod --@{Physical}|1">
-				ADD
-				</button>
-
-			<label for="attr_Mental">Mental:</label>
-				<select name="attr_Mental" id="attr_Mental" placeholder="d4">
-					<option value="d4">d4</option>
-					<option value="d6">d6</option>
-					<option value="d8">d8</option>
-					<option value="d10">d10</option>
-					<option value="d12">d12</option>
-				</select>
-				<button	type="roll" 
-					class="blank-roll-button" 
-					value="!setattr --silent --name @{character_name} --mod --@{Mental}|1">
-				ADD
-				</button>
-
-			<label for="attr_Social">Social:</label>
-				<select name="attr_Social" id="attr_Social" placeholder="d4">
-					<option value="d4">d4</option>
-					<option value="d6">d6</option>
-					<option value="d8">d8</option>
-					<option value="d10">d10</option>
-					<option value="d12">d12</option>
-				</select>
-				<button	type="roll" 
-					class="blank-roll-button" 
-					value="!setattr --silent --name @{character_name} --mod --@{Social}|1" >
-				ADD
-				</button>
-				<br />
-
-			<h3>Skills</h3>
-			<div class="sheet-2colrow">
-				<div class="sheet-col">	
-					<label for="attr_Craft">Craft:</label>
-					<select name="attr_Craft" id="attr_Craft" placeholder="d4">
-						<option value="d4">d4</option>
-						<option value="d6">d6</option>
-						<option value="d8">d8</option>
-						<option value="d10">d10</option>
-						<option value="d12">d12</option>
-					</select>
-					<button	type="roll" 
-						class="blank-roll-button" 
-						value="!setattr --silent --name @{character_name} --mod --@{Craft}|1">
-					ADD
-					</button>
-					<br />
-
-					<label for="attr_Drive">Drive:</label>
-					<select name="attr_Drive" id="attr_Drive" placeholder="d4">
-						<option value="d4">d4</option>
-						<option value="d6">d6</option>
-						<option value="d8">d8</option>
-						<option value="d10">d10</option>
-						<option value="d12">d12</option>
-					</select>
-					<button	type="roll" 
-						class="blank-roll-button" 
-						value="!setattr --silent --name @{character_name} --mod --@{Drive}|1">
-					ADD
-					</button>
-					<br />
-
-					<label for="attr_Fight">Fight:</label>
-					<select name="attr_Fight" id="attr_Fight" placeholder="d4">
-						<option value="d4">d4</option>
-						<option value="d6">d6</option>
-						<option value="d8">d8</option>
-						<option value="d10">d10</option>
-						<option value="d12">d12</option>
-					</select>
-					<button	type="roll" 
-						class="blank-roll-button" 
-						value="!setattr --silent --name @{character_name} --mod --@{Fight}|1">
-					ADD
-					</button>
-					<br />
-
-					<label for="attr_Fix">Fix:</label>
-					<select name="attr_Fix" id="attr_Fix" placeholder="d4">
-						<option value="d4">d4</option>
-						<option value="d6">d6</option>
-						<option value="d8">d8</option>
-						<option value="d10">d10</option>
-						<option value="d12">d12</option>
-					</select>
-					<button	type="roll" 
-						class="blank-roll-button" 
-						value="!setattr --silent --name @{character_name} --mod --@{Fix}|1">
-					ADD
-					</button>
-					<br />
-
-					<label for="attr_Fly">Fly:</label>
-					<select name="attr_Fly" id="attr_Fly" placeholder="d4">
-						<option value="d4">d4</option>
-						<option value="d6">d6</option>
-						<option value="d8">d8</option>
-						<option value="d10">d10</option>
-						<option value="d12">d12</option>
-					</select>
-					<button	type="roll" 
-						class="blank-roll-button" 
-						value="!setattr --silent --name @{character_name} --mod --@{Fly}|1">
-					ADD
-					</button>
-					<br />
-
-					<label for="attr_Focus">Focus:</label>
-					<select name="attr_Focus" id="attr_Focus" placeholder="d4">
-						<option value="d4">d4</option>
-						<option value="d6">d6</option>
-						<option value="d8">d8</option>
-						<option value="d10">d10</option>
-						<option value="d12">d12</option>
-					</select>
-					<button	type="roll" 
-						class="blank-roll-button" 
-						value="!setattr --silent --name @{character_name} --mod --@{Focus}|1">
-					ADD
-					</button>
-					<br />
-
-					<label for="attr_Influence">Influence:</label>
-					<select name="attr_Influence" id="attr_Influence" placeholder="d4">
-						<option value="d4">d4</option>
-						<option value="d6">d6</option>
-						<option value="d8">d8</option>
-						<option value="d10">d10</option>
-						<option value="d12">d12</option>
-					</select>
-					<button	type="roll" 
-						class="blank-roll-button" 
-						value="!setattr --silent --name @{character_name} --mod --@{Influence}|1">
-					ADD
-					</button>
-					<br />
-
-					<label for="attr_Know">Know:</label>
-					<select name="attr_Know" id="attr_Know" placeholder="d4">
-						<option value="d4">d4</option>
-						<option value="d6">d6</option>
-						<option value="d8">d8</option>
-						<option value="d10">d10</option>
-						<option value="d12">d12</option>
-					</select>
-					<button	type="roll" 
-						class="blank-roll-button" 
-						value="!setattr --silent --name @{character_name} --mod --@{Know}|1">
-					ADD
-					</button>
-					<br />
-
-					<label for="attr_Labor">Labor:</label>
-					<select name="attr_Labor" id="attr_Labor" placeholder="d4">
-						<option value="d4">d4</option>
-						<option value="d6">d6</option>
-						<option value="d8">d8</option>
-						<option value="d10">d10</option>
-						<option value="d12">d12</option>
-					</select>
-					<button	type="roll" 
-						class="blank-roll-button" 
-						value="!setattr --silent --name @{character_name} --mod --@{Labor}|1">
-					ADD
-					</button>
-
-				</div>
-
-				<div class="sheet-col">
-
-					<label for="attr_Move">Move:</label>
-					<select name="attr_Move" id="attr_Move" placeholder="d4">
-						<option value="d4">d4</option>
-						<option value="d6">d6</option>
-						<option value="d8">d8</option>
-						<option value="d10">d10</option>
-						<option value="d12">d12</option>
-					</select>
-					<button	type="roll" 
-						class="blank-roll-button" 
-						value="!setattr --silent --name @{character_name} --mod --@{Move}|1">
-					ADD
-					</button>
-					<br />
-
-					<label for="attr_Notice">Notice:</label>
-					<select name="attr_Notice" id="attr_Notice" placeholder="d4">
-						<option value="d4">d4</option>
-						<option value="d6">d6</option>
-						<option value="d8">d8</option>
-						<option value="d10">d10</option>
-						<option value="d12">d12</option>
-					</select>
-					<button	type="roll" 
-						class="blank-roll-button" 
-						value="!setattr --silent --name @{character_name} --mod --@{Notice}|1">
-					ADD
-					</button>
-					<br />
-
-					<label for="attr_Operate">Operate:</label>
-					<select name="attr_Operate" id="attr_Operate" placeholder="d4">
-						<option value="d4">d4</option>
-						<option value="d6">d6</option>
-						<option value="d8">d8</option>
-						<option value="d10">d10</option>
-						<option value="d12">d12</option>
-					</select>
-					<button	type="roll" 
-						class="blank-roll-button" 
-						value="!setattr --silent --name @{character_name} --mod --@{Operate}|1">
-					ADD
-					</button>
-					<br />
-
-					<label for="attr_Perform">Perform:</label>
-					<select name="attr_Perform" id="attr_Perform" placeholder="d4">
-						<option value="d4">d4</option>
-						<option value="d6">d6</option>
-						<option value="d8">d8</option>
-						<option value="d10">d10</option>
-						<option value="d12">d12</option>
-					</select>
-					<button	type="roll" 
-						class="blank-roll-button" 
-						value="!setattr --silent --name @{character_name} --mod --@{Perform}|1">
-					ADD
-					</button>
-					<br />
-
-					<label for="attr_Shoot">Shoot:</label>
-					<select name="attr_Shoot" id="attr_Shoot" placeholder="d4">
-						<option value="d4">d4</option>
-						<option value="d6">d6</option>
-						<option value="d8">d8</option>
-						<option value="d10">d10</option>
-						<option value="d12">d12</option>
-					</select>
-					<button	type="roll" 
-						class="blank-roll-button" 
-						value="!setattr --silent --name @{character_name} --mod --@{Shoot}|1">
-					ADD
-					</button>
-					<br />
-
-					<label for="attr_Sneak">Sneak:</label>
-					<select name="attr_Sneak" id="attr_Sneak" placeholder="d4">
-						<option value="d4">d4</option>
-						<option value="d6">d6</option>
-						<option value="d8">d8</option>
-						<option value="d10">d10</option>
-						<option value="d12">d12</option>
-					</select>
-					<button	type="roll" 
-						class="blank-roll-button" 
-						value="!setattr --silent --name @{character_name} --mod --@{Sneak}|1">
-					ADD
-					</button>
-					<br />
-
-					<label for="attr_Survive">Survive:</label>
-					<select name="attr_Survive" id="attr_Survive" placeholder="d4">
-						<option value="d4">d4</option>
-						<option value="d6">d6</option>
-						<option value="d8">d8</option>
-						<option value="d10">d10</option>
-						<option value="d12">d12</option>
-					</select>
-					<button	type="roll" 
-						class="blank-roll-button" 
-						value="!setattr --silent --name @{character_name} --mod --@{Survive}|1">
-					ADD
-					</button>
-					<br />
-
-					<label for="attr_Throw">Throw:</label>
-					<select name="attr_Throw" id="attr_Throw" placeholder="d4">
-						<option value="d4">d4</option>
-						<option value="d6">d6</option>
-						<option value="d8">d8</option>
-						<option value="d10">d10</option>
-						<option value="d12">d12</option>
-					</select>
-					<button	type="roll" 
-						class="blank-roll-button" 
-						value="!setattr --silent --name @{character_name} --mod --@{Throw}|1">
-					ADD
-					</button>					
-					<br />
-
-					<label for="attr_Treat">Treat:</label>
-					<select name="attr_Treat" id="attr_Treat" placeholder="d4">
-						<option value="d4">d4</option>
-						<option value="d6">d6</option>
-						<option value="d8">d8</option>
-						<option value="d10">d10</option>
-						<option value="d12">d12</option>
-					</select>
-					<button	type="roll" 
-						class="blank-roll-button" 
-						value="!setattr --silent --name @{character_name} --mod --@{Treat}|1">
-					ADD
-					</button>
-					<br />
-
-					<label for="attr_Trick">Trick:</label>
-
-					<select name="attr_Trick" id="attr_Trick" placeholder="d4">
-						<option value="d4">d4</option>
-						<option value="d6">d6</option>
-						<option value="d8">d8</option>
-						<option value="d10">d10</option>
-						<option value="d12">d12</option>
-					</select>
-					<button	type="roll" 
-						class="blank-roll-button" 
-						value="!setattr --silent --name @{character_name} --mod --@{Trick}|1">
-					ADD
-					</button>
-
-				</div>
-			</div>
-
-			<h3>Specialties</h3>
-			<select  class="sheet-select-wide" name="attr_Specialty1_Skill" id="attr_Specialty1_Skill">
-				<option value=""></option>
-				<option value="Craft">Craft</option>
-				<option value="Drive">Drive</option>
-				<option value="Fight">Fight</option>
-				<option value="Fix">Fix</option>
-				<option value="Fly">Fly</option>
-				<option value="Focus">Focus</option>
-				<option value="Influence">Influence</option>
-				<option value="Know">Know</option>
-				<option value="Labor">Labor</option>
-				<option value="Move">Move</option>
-				<option value="Notice">Notice</option>
-				<option value="Operate">Operate</option>
-				<option value="Perform">Perform</option>
-				<option value="Shoot">Shoot</option>
-				<option value="Sneak">Sneak</option>
-				<option value="Survive">Survive</option>
-				<option value="Throw">Throw</option>
-				<option value="Treat">Treat</option>
-				<option value="Trick">Trick</option>
+		<div class="sheet-col">	
+			<label for="attr_Craft">Craft:</label>
+			<select name="attr_Craft" id="attr_Craft" placeholder="d4">
+				<option value="d4">d4</option>
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+				<option value="d12">d12</option>
 			</select>
-			<input type="text" name="attr_Specialty1" />
-			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
+			<button	type="roll" 
+				class="blank-roll-button" 
+				value="!setattr --silent --name @{character_name} --mod --@{Craft}|1">
+			ADD
+			</button>
 			<br />
 
-			<select  class="sheet-select-wide" name="attr_Specialty2_Skill" id="attr_Specialty2_Skill">
-				<option value=""></option>
-				<option value="Craft">Craft</option>
-				<option value="Drive">Drive</option>
-				<option value="Fight">Fight</option>
-				<option value="Fix">Fix</option>
-				<option value="Fly">Fly</option>
-				<option value="Focus">Focus</option>
-				<option value="Influence">Influence</option>
-				<option value="Know">Know</option>
-				<option value="Labor">Labor</option>
-				<option value="Move">Move</option>
-				<option value="Notice">Notice</option>
-				<option value="Operate">Operate</option>
-				<option value="Perform">Perform</option>
-				<option value="Shoot">Shoot</option>
-				<option value="Sneak">Sneak</option>
-				<option value="Survive">Survive</option>
-				<option value="Throw">Throw</option>
-				<option value="Treat">Treat</option>
-				<option value="Trick">Trick</option>
+			<label for="attr_Drive">Drive:</label>
+			<select name="attr_Drive" id="attr_Drive" placeholder="d4">
+				<option value="d4">d4</option>
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+				<option value="d12">d12</option>
 			</select>
-			<input type="text" name="attr_Specialty2" />
-			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
+			<button	type="roll" 
+				class="blank-roll-button" 
+				value="!setattr --silent --name @{character_name} --mod --@{Drive}|1">
+			ADD
+			</button>
 			<br />
 
-			<select  class="sheet-select-wide" name="attr_Specialty3_Skill" id="attr_Specialty3_Skill">
-				<option value=""></option>
-				<option value="Craft">Craft</option>
-				<option value="Drive">Drive</option>
-				<option value="Fight">Fight</option>
-				<option value="Fix">Fix</option>
-				<option value="Fly">Fly</option>
-				<option value="Focus">Focus</option>
-				<option value="Influence">Influence</option>
-				<option value="Know">Know</option>
-				<option value="Labor">Labor</option>
-				<option value="Move">Move</option>
-				<option value="Notice">Notice</option>
-				<option value="Operate">Operate</option>
-				<option value="Perform">Perform</option>
-				<option value="Shoot">Shoot</option>
-				<option value="Sneak">Sneak</option>
-				<option value="Survive">Survive</option>
-				<option value="Throw">Throw</option>
-				<option value="Treat">Treat</option>
-				<option value="Trick">Trick</option>
+			<label for="attr_Fight">Fight:</label>
+			<select name="attr_Fight" id="attr_Fight" placeholder="d4">
+				<option value="d4">d4</option>
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+				<option value="d12">d12</option>
 			</select>
-			<input type="text" name="attr_Specialty3" />
-			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
+			<button	type="roll" 
+				class="blank-roll-button" 
+				value="!setattr --silent --name @{character_name} --mod --@{Fight}|1">
+			ADD
+			</button>
 			<br />
-			
-			<select  class="sheet-select-wide" name="attr_Specialty4_Skill" id="attr_Specialty4_Skill">
-				<option value=""></option>
-				<option value="Craft">Craft</option>
-				<option value="Drive">Drive</option>
-				<option value="Fight">Fight</option>
-				<option value="Fix">Fix</option>
-				<option value="Fly">Fly</option>
-				<option value="Focus">Focus</option>
-				<option value="Influence">Influence</option>
-				<option value="Know">Know</option>
-				<option value="Labor">Labor</option>
-				<option value="Move">Move</option>
-				<option value="Notice">Notice</option>
-				<option value="Operate">Operate</option>
-				<option value="Perform">Perform</option>
-				<option value="Shoot">Shoot</option>
-				<option value="Sneak">Sneak</option>
-				<option value="Survive">Survive</option>
-				<option value="Throw">Throw</option>
-				<option value="Treat">Treat</option>
-				<option value="Trick">Trick</option>
+
+			<label for="attr_Fix">Fix:</label>
+			<select name="attr_Fix" id="attr_Fix" placeholder="d4">
+				<option value="d4">d4</option>
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+				<option value="d12">d12</option>
 			</select>
-			<input type="text" name="attr_Specialty4" />
-			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
+			<button	type="roll" 
+				class="blank-roll-button" 
+				value="!setattr --silent --name @{character_name} --mod --@{Fix}|1">
+			ADD
+			</button>
 			<br />
-			
-			<select  class="sheet-select-wide" name="attr_Specialty5_Skill" id="attr_Specialty5_Skill">
-				<option value=""></option>
-				<option value="Craft">Craft</option>
-				<option value="Drive">Drive</option>
-				<option value="Fight">Fight</option>
-				<option value="Fix">Fix</option>
-				<option value="Fly">Fly</option>
-				<option value="Focus">Focus</option>
-				<option value="Influence">Influence</option>
-				<option value="Know">Know</option>
-				<option value="Labor">Labor</option>
-				<option value="Move">Move</option>
-				<option value="Notice">Notice</option>
-				<option value="Operate">Operate</option>
-				<option value="Perform">Perform</option>
-				<option value="Shoot">Shoot</option>
-				<option value="Sneak">Sneak</option>
-				<option value="Survive">Survive</option>
-				<option value="Throw">Throw</option>
-				<option value="Treat">Treat</option>
-				<option value="Trick">Trick</option>
+
+			<label for="attr_Fly">Fly:</label>
+			<select name="attr_Fly" id="attr_Fly" placeholder="d4">
+				<option value="d4">d4</option>
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+				<option value="d12">d12</option>
 			</select>
-			<input type="text" name="attr_Specialty5" />
-			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
+			<button	type="roll" 
+				class="blank-roll-button" 
+				value="!setattr --silent --name @{character_name} --mod --@{Fly}|1">
+			ADD
+			</button>
 			<br />
-			
-            <h3>Signature Assets</h3>
-        	<input type="text" name="attr_SigAsset1" />
-        	<select name="attr_SigAsset1_Die" id="attr_SigAsset1_Die" placeholder="d6">
-        		<option value="d6">d6</option>
-        		<option value="d8">d8</option>
-        		<option value="d10">d10</option>
-        	</select>
-        	<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --@{SigAsset1_Die}|1">
-        		ADD
-        	</button>
-        	<br />
-        	<input type="text" name="attr_SigAsset2" />
-        	<select name="attr_SigAsset2_Die" id="attr_SigAsset2_Die" placeholder="d6">
-        		<option value="d6">d6</option>
-        		<option value="d8">d8</option>
-        		<option value="d10">d10</option>
-        	</select>
-        	<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --@{SigAsset2_Die}|1">
-        		ADD
-        	</button>
+
+			<label for="attr_Focus">Focus:</label>
+			<select name="attr_Focus" id="attr_Focus" placeholder="d4">
+				<option value="d4">d4</option>
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+				<option value="d12">d12</option>
+			</select>
+			<button	type="roll" 
+				class="blank-roll-button" 
+				value="!setattr --silent --name @{character_name} --mod --@{Focus}|1">
+			ADD
+			</button>
+			<br />
+
+			<label for="attr_Influence">Influence:</label>
+			<select name="attr_Influence" id="attr_Influence" placeholder="d4">
+				<option value="d4">d4</option>
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+				<option value="d12">d12</option>
+			</select>
+			<button	type="roll" 
+				class="blank-roll-button" 
+				value="!setattr --silent --name @{character_name} --mod --@{Influence}|1">
+			ADD
+			</button>
+			<br />
+
+			<label for="attr_Know">Know:</label>
+			<select name="attr_Know" id="attr_Know" placeholder="d4">
+				<option value="d4">d4</option>
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+				<option value="d12">d12</option>
+			</select>
+			<button	type="roll" 
+				class="blank-roll-button" 
+				value="!setattr --silent --name @{character_name} --mod --@{Know}|1">
+			ADD
+			</button>
+			<br />
+
+			<label for="attr_Labor">Labor:</label>
+			<select name="attr_Labor" id="attr_Labor" placeholder="d4">
+				<option value="d4">d4</option>
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+				<option value="d12">d12</option>
+			</select>
+			<button	type="roll" 
+				class="blank-roll-button" 
+				value="!setattr --silent --name @{character_name} --mod --@{Labor}|1">
+			ADD
+			</button>
+
 		</div>
-		
+
 		<div class="sheet-col">
-			<h3>Description</h3>
-			<textarea name="attr_Description"></textarea>
+
+			<label for="attr_Move">Move:</label>
+			<select name="attr_Move" id="attr_Move" placeholder="d4">
+				<option value="d4">d4</option>
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+				<option value="d12">d12</option>
+			</select>
+			<button	type="roll" 
+				class="blank-roll-button" 
+				value="!setattr --silent --name @{character_name} --mod --@{Move}|1">
+			ADD
+			</button>
 			<br />
 
-			<h3>Distinction</h3>
-			<input type="text" name="attr_Distinction1" />
-			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d8|1">ADD d8</button>
-			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d4|1">ADD d4</button>
-			<br />
-	    	Highlight Skills:<input type="text" name="attr_Distinction1_Highlights" />
-	    	<br />
-			<input type="checkbox" class="largerCheckbox" name="attr_Distinction1_SFX1_Check" value="checked"> 
-			<textarea name="attr_Distinction1_SFX1" placeholder="SFX: Hinder: Gain a PP when you switch out this distinction's d8 for a d4."></textarea>
-	    	<br />
-			<input type="checkbox" class="largerCheckbox" name="attr_Distinction1_SFX2_Check" value="checked">
-			<textarea name="attr_Distinction1_SFX2"></textarea>
-	    	<br />
-			<input type="checkbox" class="largerCheckbox" name="attr_Distinction1_SFX3_Check" value="checked">
-			<textarea name="attr_Distinction1_SFX3"></textarea>
-	    	<br />
-			
-			<h3>Distinction</h3>
-			<input type="text" name="attr_Distinction2" />
-			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d8|1">ADD d8</button>
-			<button type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d4|1">ADD d4</button>
-			<br />
-		    	Highlight Skills:<input type="text" name="attr_Distinction2_Highlights" />
-			<br />
-			<input type="checkbox" class="largerCheckbox" name="attr_Distinction2_SFX1_Check" value="checked"> 
-			<textarea name="attr_Distinction2_SFX1" placeholder="SFX: Hinder: Gain a PP when you switch out this distinction's d8 for a d4."></textarea>
-	    	<br />
-			<input type="checkbox" class="largerCheckbox" name="attr_Distinction2_SFX2_Check" value="checked">
-			<textarea name="attr_Distinction2_SFX2"></textarea>
-	    	<br />
-			<input type="checkbox" class="largerCheckbox" name="attr_Distinction2_SFX3_Check" value="checked">
-			<textarea name="attr_Distinction2_SFX3"></textarea>
+			<label for="attr_Notice">Notice:</label>
+			<select name="attr_Notice" id="attr_Notice" placeholder="d4">
+				<option value="d4">d4</option>
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+				<option value="d12">d12</option>
+			</select>
+			<button	type="roll" 
+				class="blank-roll-button" 
+				value="!setattr --silent --name @{character_name} --mod --@{Notice}|1">
+			ADD
+			</button>
 			<br />
 
-			<h3>Distinction</h3>
-			<input type="text" name="attr_Distinction3" />
-			<button type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d8|1">ADD d8</button>
-			<button type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d4|1">ADD d4</button>
+			<label for="attr_Operate">Operate:</label>
+			<select name="attr_Operate" id="attr_Operate" placeholder="d4">
+				<option value="d4">d4</option>
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+				<option value="d12">d12</option>
+			</select>
+			<button	type="roll" 
+				class="blank-roll-button" 
+				value="!setattr --silent --name @{character_name} --mod --@{Operate}|1">
+			ADD
+			</button>
 			<br />
-		    	Highlight Skills:<input type="text" name="attr_Distinction3_Highlights" />
+
+			<label for="attr_Perform">Perform:</label>
+			<select name="attr_Perform" id="attr_Perform" placeholder="d4">
+				<option value="d4">d4</option>
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+				<option value="d12">d12</option>
+			</select>
+			<button	type="roll" 
+				class="blank-roll-button" 
+				value="!setattr --silent --name @{character_name} --mod --@{Perform}|1">
+			ADD
+			</button>
 			<br />
-			<input type="checkbox" class="largerCheckbox" name="attr_Distinction3_SFX1_Check" value="checked"> 
-			<textarea name="attr_Distinction3_SFX1" placeholder="SFX: Hinder: Gain a PP when you switch out this distinction's d8 for a d4."></textarea>
+
+			<label for="attr_Shoot">Shoot:</label>
+			<select name="attr_Shoot" id="attr_Shoot" placeholder="d4">
+				<option value="d4">d4</option>
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+				<option value="d12">d12</option>
+			</select>
+			<button	type="roll" 
+				class="blank-roll-button" 
+				value="!setattr --silent --name @{character_name} --mod --@{Shoot}|1">
+			ADD
+			</button>
 			<br />
-			<input type="checkbox" class="largerCheckbox" name="attr_Distinction3_SFX2_Check" value="checked">
-			<textarea name="attr_Distinction3_SFX2"></textarea>
-	    	<br />
-			<input type="checkbox" class="largerCheckbox" name="attr_Distinction3_SFX3_Check" value="checked">
-			<textarea name="attr_Distinction3_SFX3"></textarea>
+
+			<label for="attr_Sneak">Sneak:</label>
+			<select name="attr_Sneak" id="attr_Sneak" placeholder="d4">
+				<option value="d4">d4</option>
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+				<option value="d12">d12</option>
+			</select>
+			<button	type="roll" 
+				class="blank-roll-button" 
+				value="!setattr --silent --name @{character_name} --mod --@{Sneak}|1">
+			ADD
+			</button>
+			<br />
+
+			<label for="attr_Survive">Survive:</label>
+			<select name="attr_Survive" id="attr_Survive" placeholder="d4">
+				<option value="d4">d4</option>
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+				<option value="d12">d12</option>
+			</select>
+			<button	type="roll" 
+				class="blank-roll-button" 
+				value="!setattr --silent --name @{character_name} --mod --@{Survive}|1">
+			ADD
+			</button>
+			<br />
+
+			<label for="attr_Throw">Throw:</label>
+			<select name="attr_Throw" id="attr_Throw" placeholder="d4">
+				<option value="d4">d4</option>
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+				<option value="d12">d12</option>
+			</select>
+			<button	type="roll" 
+				class="blank-roll-button" 
+				value="!setattr --silent --name @{character_name} --mod --@{Throw}|1">
+			ADD
+			</button>					
+			<br />
+
+			<label for="attr_Treat">Treat:</label>
+			<select name="attr_Treat" id="attr_Treat" placeholder="d4">
+				<option value="d4">d4</option>
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+				<option value="d12">d12</option>
+			</select>
+			<button	type="roll" 
+				class="blank-roll-button" 
+				value="!setattr --silent --name @{character_name} --mod --@{Treat}|1">
+			ADD
+			</button>
+			<br />
+
+			<label for="attr_Trick">Trick:</label>
+
+			<select name="attr_Trick" id="attr_Trick" placeholder="d4">
+				<option value="d4">d4</option>
+				<option value="d6">d6</option>
+				<option value="d8">d8</option>
+				<option value="d10">d10</option>
+				<option value="d12">d12</option>
+			</select>
+			<button	type="roll" 
+				class="blank-roll-button" 
+				value="!setattr --silent --name @{character_name} --mod --@{Trick}|1">
+			ADD
+			</button>
+
 		</div>
 	</div>
+
+	<h3>Specialties</h3>
+	<select  class="sheet-select-wide" name="attr_Specialty1_Skill" id="attr_Specialty1_Skill">
+		<option value=""></option>
+		<option value="Craft">Craft</option>
+		<option value="Drive">Drive</option>
+		<option value="Fight">Fight</option>
+		<option value="Fix">Fix</option>
+		<option value="Fly">Fly</option>
+		<option value="Focus">Focus</option>
+		<option value="Influence">Influence</option>
+		<option value="Know">Know</option>
+		<option value="Labor">Labor</option>
+		<option value="Move">Move</option>
+		<option value="Notice">Notice</option>
+		<option value="Operate">Operate</option>
+		<option value="Perform">Perform</option>
+		<option value="Shoot">Shoot</option>
+		<option value="Sneak">Sneak</option>
+		<option value="Survive">Survive</option>
+		<option value="Throw">Throw</option>
+		<option value="Treat">Treat</option>
+		<option value="Trick">Trick</option>
+	</select>
+	<input type="text" name="attr_Specialty1" />
+	<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
+	<br />
+
+	<select  class="sheet-select-wide" name="attr_Specialty2_Skill" id="attr_Specialty2_Skill">
+		<option value=""></option>
+		<option value="Craft">Craft</option>
+		<option value="Drive">Drive</option>
+		<option value="Fight">Fight</option>
+		<option value="Fix">Fix</option>
+		<option value="Fly">Fly</option>
+		<option value="Focus">Focus</option>
+		<option value="Influence">Influence</option>
+		<option value="Know">Know</option>
+		<option value="Labor">Labor</option>
+		<option value="Move">Move</option>
+		<option value="Notice">Notice</option>
+		<option value="Operate">Operate</option>
+		<option value="Perform">Perform</option>
+		<option value="Shoot">Shoot</option>
+		<option value="Sneak">Sneak</option>
+		<option value="Survive">Survive</option>
+		<option value="Throw">Throw</option>
+		<option value="Treat">Treat</option>
+		<option value="Trick">Trick</option>
+	</select>
+	<input type="text" name="attr_Specialty2" />
+	<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
+	<br />
+
+	<select  class="sheet-select-wide" name="attr_Specialty3_Skill" id="attr_Specialty3_Skill">
+		<option value=""></option>
+		<option value="Craft">Craft</option>
+		<option value="Drive">Drive</option>
+		<option value="Fight">Fight</option>
+		<option value="Fix">Fix</option>
+		<option value="Fly">Fly</option>
+		<option value="Focus">Focus</option>
+		<option value="Influence">Influence</option>
+		<option value="Know">Know</option>
+		<option value="Labor">Labor</option>
+		<option value="Move">Move</option>
+		<option value="Notice">Notice</option>
+		<option value="Operate">Operate</option>
+		<option value="Perform">Perform</option>
+		<option value="Shoot">Shoot</option>
+		<option value="Sneak">Sneak</option>
+		<option value="Survive">Survive</option>
+		<option value="Throw">Throw</option>
+		<option value="Treat">Treat</option>
+		<option value="Trick">Trick</option>
+	</select>
+	<input type="text" name="attr_Specialty3" />
+	<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
+	<br />
+
+	<select  class="sheet-select-wide" name="attr_Specialty4_Skill" id="attr_Specialty4_Skill">
+		<option value=""></option>
+		<option value="Craft">Craft</option>
+		<option value="Drive">Drive</option>
+		<option value="Fight">Fight</option>
+		<option value="Fix">Fix</option>
+		<option value="Fly">Fly</option>
+		<option value="Focus">Focus</option>
+		<option value="Influence">Influence</option>
+		<option value="Know">Know</option>
+		<option value="Labor">Labor</option>
+		<option value="Move">Move</option>
+		<option value="Notice">Notice</option>
+		<option value="Operate">Operate</option>
+		<option value="Perform">Perform</option>
+		<option value="Shoot">Shoot</option>
+		<option value="Sneak">Sneak</option>
+		<option value="Survive">Survive</option>
+		<option value="Throw">Throw</option>
+		<option value="Treat">Treat</option>
+		<option value="Trick">Trick</option>
+	</select>
+	<input type="text" name="attr_Specialty4" />
+	<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
+	<br />
+
+	<select  class="sheet-select-wide" name="attr_Specialty5_Skill" id="attr_Specialty5_Skill">
+		<option value=""></option>
+		<option value="Craft">Craft</option>
+		<option value="Drive">Drive</option>
+		<option value="Fight">Fight</option>
+		<option value="Fix">Fix</option>
+		<option value="Fly">Fly</option>
+		<option value="Focus">Focus</option>
+		<option value="Influence">Influence</option>
+		<option value="Know">Know</option>
+		<option value="Labor">Labor</option>
+		<option value="Move">Move</option>
+		<option value="Notice">Notice</option>
+		<option value="Operate">Operate</option>
+		<option value="Perform">Perform</option>
+		<option value="Shoot">Shoot</option>
+		<option value="Sneak">Sneak</option>
+		<option value="Survive">Survive</option>
+		<option value="Throw">Throw</option>
+		<option value="Treat">Treat</option>
+		<option value="Trick">Trick</option>
+	</select>
+	<input type="text" name="attr_Specialty5" />
+	<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d6|1">ADD d6</button>
+	<br />
+
+    	<h3>Signature Assets</h3>
+	<input type="text" name="attr_SigAsset1" />
+	<select name="attr_SigAsset1_Die" id="attr_SigAsset1_Die" placeholder="d6">
+		<option value="d6">d6</option>
+		<option value="d8">d8</option>
+		<option value="d10">d10</option>
+	</select>
+	<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --@{SigAsset1_Die}|1">
+		ADD
+	</button>
+	<br />
+	<input type="text" name="attr_SigAsset2" />
+	<select name="attr_SigAsset2_Die" id="attr_SigAsset2_Die" placeholder="d6">
+		<option value="d6">d6</option>
+		<option value="d8">d8</option>
+		<option value="d10">d10</option>
+	</select>
+	<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --@{SigAsset2_Die}|1">
+		ADD
+	</button>
+
+	<h3>Description</h3>
+	<textarea name="attr_Description"></textarea>
+	<br />
+
+	<h3>Distinction</h3>
+	<input type="text" name="attr_Distinction1" />
+	<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d8|1">ADD d8</button>
+	<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d4|1">ADD d4</button>
+	<br />
+	Highlight Skills:<input type="text" name="attr_Distinction1_Highlights" />
+	<br />
+	<input type="checkbox" class="largerCheckbox" name="attr_Distinction1_SFX1_Check" value="checked"> 
+	<textarea name="attr_Distinction1_SFX1" placeholder="SFX: Hinder: Gain a PP when you switch out this distinction's d8 for a d4."></textarea>
+	<br />
+	<input type="checkbox" class="largerCheckbox" name="attr_Distinction1_SFX2_Check" value="checked">
+	<textarea name="attr_Distinction1_SFX2"></textarea>
+	<br />
+	<input type="checkbox" class="largerCheckbox" name="attr_Distinction1_SFX3_Check" value="checked">
+	<textarea name="attr_Distinction1_SFX3"></textarea>
+	<br />
+
+	<h3>Distinction</h3>
+	<input type="text" name="attr_Distinction2" />
+	<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d8|1">ADD d8</button>
+	<button type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d4|1">ADD d4</button>
+	<br />
+	Highlight Skills:<input type="text" name="attr_Distinction2_Highlights" />
+	<br />
+	<input type="checkbox" class="largerCheckbox" name="attr_Distinction2_SFX1_Check" value="checked"> 
+	<textarea name="attr_Distinction2_SFX1" placeholder="SFX: Hinder: Gain a PP when you switch out this distinction's d8 for a d4."></textarea>
+	<br />
+	<input type="checkbox" class="largerCheckbox" name="attr_Distinction2_SFX2_Check" value="checked">
+	<textarea name="attr_Distinction2_SFX2"></textarea>
+	<br />
+	<input type="checkbox" class="largerCheckbox" name="attr_Distinction2_SFX3_Check" value="checked">
+	<textarea name="attr_Distinction2_SFX3"></textarea>
+	<br />
+
+	<h3>Distinction</h3>
+	<input type="text" name="attr_Distinction3" />
+	<button type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d8|1">ADD d8</button>
+	<button type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d4|1">ADD d4</button>
+	<br />
+	Highlight Skills:<input type="text" name="attr_Distinction3_Highlights" />
+	<br />
+	<input type="checkbox" class="largerCheckbox" name="attr_Distinction3_SFX1_Check" value="checked"> 
+	<textarea name="attr_Distinction3_SFX1" placeholder="SFX: Hinder: Gain a PP when you switch out this distinction's d8 for a d4."></textarea>
+	<br />
+	<input type="checkbox" class="largerCheckbox" name="attr_Distinction3_SFX2_Check" value="checked">
+	<textarea name="attr_Distinction3_SFX2"></textarea>
+	<br />
+	<input type="checkbox" class="largerCheckbox" name="attr_Distinction3_SFX3_Check" value="checked">
+	<textarea name="attr_Distinction3_SFX3"></textarea>
 </div>
 <!-- Sheet close --> 
 <!--End of Sheet>
