@@ -1,0 +1,32 @@
+button[type=roll].sheet-blank-roll-button::before { content: ''; }
+
+button[type=roll].sheet-blank-roll-button { padding: 5px 8px 2px 0px; }
+
+input[type=checkbox] { 
+ width: 32px; 
+ height: 32px; 
+ background-color: green;
+ display:inline-block;
+ vertical-align: middle;
+}
+
+textarea { 
+ height: 32px;
+ width: 500px;
+ display:inline-block;
+ vertical-align: middle;
+}
+
+select {
+ width: 60px;
+}
+
+select.sheet-select-wide {
+ width: 100px;
+}
+
+label {
+ text-align: right;
+ width: 75px;
+ display:inline-block;
+}
