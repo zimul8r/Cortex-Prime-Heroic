@@ -10,15 +10,9 @@ input[type=checkbox] {
  vertical-align: middle;
 }
 
-textarea { 
- height: 32px;
- width: 500px;
- display:inline-block;
- vertical-align: middle;
-}
-textareawide { 
- height: 32px;
- width: 750px;
+input[type=textwide] { 
+ width: 750px; 
+ height: 32px; 
  display:inline-block;
  vertical-align: middle;
 }
