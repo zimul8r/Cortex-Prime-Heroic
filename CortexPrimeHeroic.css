@@ -16,6 +16,12 @@ textarea {
  display:inline-block;
  vertical-align: middle;
 }
+textareawide { 
+ height: 32px;
+ width: 750px;
+ display:inline-block;
+ vertical-align: middle;
+}
 
 select {
  width: 60px;
