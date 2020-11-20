@@ -126,7 +126,7 @@
 	</button>
 	<br />
 
-    	<h3>Distinctions</h3>
+    <h3>Distinctions</h3>
 	<div class="sheet-2colrow">
 		<input type="textwide" name="attr_Dist1" />
 		<button style="font-size:0;height:30px;"  name="roll_d4"  type="roll" value="!setattr --silent --name @{character_name} --mod --d4|1">	
@@ -143,134 +143,49 @@
 		<br />	
 	</div>
 	
-    	<h3>Power Set:<input type="textwide" name="attr_PowerSet1" /></h3>
+    <h3>Power Set:<input type="textwide" name="attr_PowerSet1" /></h3>
 	<br />	
-	<div class="sheet-2colrow">
+ 	<div class="sheet-3colrow">
 		<div class="sheet-col">	
-			<input type="text" name="attr_PS1_Power1" />
-			<select name="attr_Craft" id="attr_PS1_Power1_Die" placeholder="d4">
-				<option value="d4">d4</option>
-				<option value="d6">d6</option>
-				<option value="d8">d8</option>
-				<option value="d10">d10</option>
-				<option value="d12">d12</option>
-			</select>
-			<br />
-
-			<input type="text" name="attr_PS1_Power2" />
-			<select name="attr_Craft" id="attr_PS1_Power2_Die" placeholder="d4">
-				<option value="d4">d4</option>
-				<option value="d6">d6</option>
-				<option value="d8">d8</option>
-				<option value="d10">d10</option>
-				<option value="d12">d12</option>
-			</select>
-			<br />
-		</div>
-		<div class="sheet-col">	
-			<input type="text" name="attr_PS1_Power3" />
-			<select name="attr_Craft" id="attr_PS1_Power3_Die" placeholder="d4">
-				<option value="d4">d4</option>
-				<option value="d6">d6</option>
-				<option value="d8">d8</option>
-				<option value="d10">d10</option>
-				<option value="d12">d12</option>
-			</select>
-			<br />
-
-			<input type="text" name="attr_PS1_Power4" />
-			<select name="attr_Craft" id="attr_PS1_Power4_Die" placeholder="d4">
-				<option value="d4">d4</option>
-				<option value="d6">d6</option>
-				<option value="d8">d8</option>
-				<option value="d10">d10</option>
-				<option value="d12">d12</option>
-			</select>
-			<br />
-		</div>
-	</div>
-
-	<label for="attr_PS1_SFX1">SFX:</label>
-	<input type="textwide" name="attr_PS1_SFX1" />
-	<br />
-
-	<label for="attr_PS1_SFX2">SFX:</label>
-	<input type="textwide" name="attr_PS1_SFX2" />
-	<br />
-
-	<label for="attr_PS1_Limit1">Limit:</label>
-	<input type="textwide" name="attr_PS1_Limit1" />
-	<br />
-
-	<label for="attr_PS1_Limit2">Limit:</label>
-	<input type="textwide" name="attr_PS1_Limit2" />
-	<br />
-	
-    	<h3>Power Set:<input type="textwide" name="attr_PowerSet2" /></h3>	
-	<br />	
-	<div class="sheet-2colrow">
-		<div class="sheet-col">	
-			<input type="text" name="attr_PS2_Power1" />
-			<select name="attr_Craft" id="attr_PS2_Power1_Die" placeholder="d4">
-				<option value="d4">d4</option>
-				<option value="d6">d6</option>
-				<option value="d8">d8</option>
-				<option value="d10">d10</option>
-				<option value="d12">d12</option>
-			</select>
-			<br />
-
-			<input type="text" name="attr_PS2_Power2" />
-			<select name="attr_Craft" id="attr_PS2_Power2_Die" placeholder="d4">
-				<option value="d4">d4</option>
-				<option value="d6">d6</option>
-				<option value="d8">d8</option>
-				<option value="d10">d10</option>
-				<option value="d12">d12</option>
-			</select>
-			<br />
-		</div>
+        	<label for="attr_PS1">Powers</label>
+            <div>
+            	<fieldset class="repeating_powers1"> 
+            		<input type="text" name="attr_PS1Power" />
+            		<select name="attr_PowerDie" placeholder="d4">
+            			<option value="d4">d4</option>
+            			<option value="d6">d6</option>
+            			<option value="d8">d8</option>
+            			<option value="d10">d10</option>
+            			<option value="d12">d12</option>
+            		</select>
+            		<button	type="roll" 
+            			class="blank-roll-button" 
+            			value="!setattr --silent --name @{character_name} --mod --@{PowerDie}|1" >
+            			ADD
+            		</button>
+            	</fieldset> 
+            </div>
+        </div>
 
 		<div class="sheet-col">	
-			<input type="text" name="attr_PS2_Power3" />
-			<select name="attr_Craft" id="attr_PS2_Power3_Die" placeholder="d4">
-				<option value="d4">d4</option>
-				<option value="d6">d6</option>
-				<option value="d8">d8</option>
-				<option value="d10">d10</option>
-				<option value="d12">d12</option>
-			</select>
-			<br />
+        	<label for="attr_PS1">SFX</label>
+            <div>
+            	<fieldset class="repeating_SFX1"> 
+            	    <input type="text" name="attr_PS1SFX" />
+            	</fieldset>
+            </div>
+        </div>
 
-			<input type="text" name="attr_PS2_Power4" />
-			<select name="attr_Craft" id="attr_PS2_Power4_Die" placeholder="d4">
-				<option value="d4">d4</option>
-				<option value="d6">d6</option>
-				<option value="d8">d8</option>
-				<option value="d10">d10</option>
-				<option value="d12">d12</option>
-			</select>
-			<br />
-		</div>
-	</div>
-
-	<label for="attr_PS2_SFX1">SFX:</label>
-	<input type="textwide" name="attr_PS2_SFX1" />
-	<br />
-
-	<label for="attr_PS2_SFX2">SFX:</label>
-	<input type="textwide" name="attr_PS2_SFX2" />
-	<br />
-
-	<label for="attr_PS2_Limit1">Limit:</label>
-	<input type="textwide" name="attr_PS2_Limit1" />
-	<br />
-
-	<label for="attr_PS2_Limit2">Limit:</label>
-	<input type="textwide" name="attr_PS2_Limit2" />
-	<br />
-
-
+		<div class="sheet-col">	
+        	<label for="attr_PS1">Limits</label>
+            <div>
+            	<fieldset class="repeating_Limit1"> 
+            	    <input type="text" name="attr_PS1Limit" />
+            	</fieldset>
+            </div>
+	    </div>
+    </div>
+    
     <h3>Specialties</h3>
 	<br />	
 	<div class="sheet-2colrow">
@@ -343,3 +258,4 @@
 </div>
 <!-- Sheet close --> 
 <!--End of Sheet>
+<!-- ********************************************************************************************************************* -->
