@@ -11,7 +11,7 @@ input[type=checkbox] {
 }
 
 input[type=textwide] { 
- width: 600px; 
+ width: 400px; 
  height: 32px; 
  display:inline-block;
  vertical-align: middle;
