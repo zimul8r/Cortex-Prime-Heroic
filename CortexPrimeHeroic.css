@@ -1,6 +1,9 @@
 button[type=roll].sheet-blank-roll-button::before { content: ''; }
 
-button[type=roll].sheet-blank-roll-button { padding: 0px 8px 0px 0px; }
+button[type=roll].sheet-blank-roll-button { 
+ padding: 0px 8px 0px 0px; 
+ height: 30px;
+}
 
 input[type=checkbox] { 
  width: 32px; 
@@ -29,4 +32,10 @@ label {
  text-align: right;
  width: 75px;
  display:inline-block;
+}
+
+textarea { 
+ height: 32px;
+ display:inline-block;
+ vertical-align: middle;
 }
