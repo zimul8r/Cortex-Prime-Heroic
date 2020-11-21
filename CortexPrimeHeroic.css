@@ -21,7 +21,7 @@ input[type=textwide] {
 }
 
 select {
- width: 60px;
+ width: 75px;
 }
 
 select.sheet-select-wide {
@@ -35,7 +35,8 @@ label {
 }
 
 textarea { 
- height: 32px;
+ height: 34px;
+ width 3300px;
  display:inline-block;
  vertical-align: middle;
 }
