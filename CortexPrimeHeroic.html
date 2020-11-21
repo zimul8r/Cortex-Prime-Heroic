@@ -155,9 +155,24 @@
     
     <h3>Power Set:<input type="textwide" name="attr_PowerSet1" /></h3>
 	<br />	
- 	<div class="sheet-3colrow">
+ 	<div class="sheet-2colrow">
 		<div class="sheet-col">	
-        	<label for="attr_PS1">Powers</label>
+        	<h3>Powers</h3>
+
+    		<input type="text" name="attr_PS1Power" />
+    		<select name="attr_PowerDie" placeholder="d4">
+    			<option value="d4">d4</option>
+    			<option value="d6">d6</option>
+    			<option value="d8">d8</option>
+    			<option value="d10">d10</option>
+    			<option value="d12">d12</option>
+    		</select>
+    		<button	type="roll" 
+    			class="blank-roll-button" 
+    			value="!setattr --silent --name @{character_name} --mod --@{PowerDie}|1" >
+    			ADD
+    		</button>
+
             <div>
             	<fieldset class="repeating_powers1"> 
             		<input type="text" name="attr_PS1Power" />
@@ -178,22 +193,15 @@
         </div>
 
 		<div class="sheet-col">	
-        	<label for="attr_PS1">SFX</label>
+        	<h3>SFX and Limits</h3>
+    	    <textarea name="attr_PS1SFX" placeholder="SFX: Effect. blah blah blah OR Limit: Limitation. blah blah blah" ></textarea>
             <div>
             	<fieldset class="repeating_SFX1"> 
-            	    <textarea name="attr_PS1SFX" ></textarea>
+            	    <textarea name="attr_PS1SFX" placeholder="SFX: Effect. blah blah blah OR Limit: Limitation. blah blah blah" ></textarea>
             	</fieldset>
             </div>
         </div>
 
-		<div class="sheet-col">	
-        	<label for="attr_PS1">Limits</label>
-            <div>
-            	<fieldset class="repeating_Limit1"> 
-            	    <textarea name="attr_PS1Limit" ></textarea>
-            	</fieldset>
-            </div>
-	    </div>
     </div>
 
     <hr />
