@@ -44,3 +44,17 @@ input.sheet-toggle-show:not(:checked) ~ div.sheet-body,
 input.sheet-toggle-hide:checked ~ div.sheet-body {
     display: none;
 }
+
+/*Configure the tab buttons*/
+.sheet-character,
+.sheet-config,
+.sheet-dice-only {
+	display: none;
+}
+
+/* show the selected tab */
+.sheet-tabstoggle[value="character"] ~ div.sheet-character,
+.sheet-tabstoggle[value="configuration"] ~ div.sheet-config,
+.sheet-tabstoggle[value="dice-only"] ~ div.sheet-dice-only {
+	display: block;
+}
