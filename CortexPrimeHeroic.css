@@ -6,11 +6,10 @@ button[type=roll].sheet-blank-roll-button {
 }
 
 input[type=checkbox] { 
- width: 32px; 
- height: 32px; 
+ width: 20px; 
+ height: 20px; 
  background-color: green;
- display:inline-block;
- vertical-align: middle;
+ vertical-align: 0px;
 }
 
 input[type=textwide] { 
@@ -39,4 +38,9 @@ textarea {
  width 3300px;
  display:inline-block;
  vertical-align: middle;
+}
+
+input.sheet-toggle-show:not(:checked) ~ div.sheet-body,
+input.sheet-toggle-hide:checked ~ div.sheet-body {
+    display: none;
 }
