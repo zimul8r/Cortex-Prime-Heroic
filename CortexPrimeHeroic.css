@@ -12,7 +12,7 @@ input[type=checkbox] {
  vertical-align: 0px;
 }
 
-input[type=textwide] { 
+input[type=text].sheet-input-text-wide { 
  width: 400px; 
  height: 32px; 
  display:inline-block;
