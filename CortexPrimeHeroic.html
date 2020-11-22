@@ -65,14 +65,13 @@
         			</td>
         		</tr>
         	</table>
-        	<hr>
         </div><!-- Dice Bar close --> 
         <div class='sheet-prime-core'>
         
         	<h3>Name: <input type="text" class="input-text-wide" name="attr_character_name"/></h3>
         
          	<div class="sheet-2colrow">
-        		<div class="sheet-col">	
+        		<div class="sheet-col" style="border: 1px outset black;  background-color: lightgreen;">	
                 	<h3>Affiliations</h3>
                     <div>
                     	<label for="attr_Solo">Solo:</label>
@@ -121,7 +120,7 @@
                     </div>
                 </div>
         
-                <div class="sheet-col">	
+                <div class="sheet-col" style="border: 1px outset black;  background-color: lightyellow;">	
                     <h3>Distinctions</h3>
                     <div>
                     	<input type="text" name="attr_Dist1" />
@@ -154,72 +153,19 @@
         	</div>	
             
             <hr />
-            
-            <input type="checkbox" class="sheet-toggle-show" />
-            <span style="font-size:30px;"  vertical-align="middle">Power Set 1</span>
-            <div class="sheet-body" id="PowerSet1">  
-                <input type="text" class="input-text-wide" name="attr_PowerSet1" id="attr_PowerSet1" />
-            	<br />	
-             	<div class="sheet-2colrow">
-            		<div class="sheet-col">	
-                    	<h3>Powers</h3>
-            
-                		<input type="text" name="attr_PS1Power" />
-                		<select name="attr_PS1PowerDie" placeholder="d4">
-                			<option value="d4">d4</option>
-                			<option value="d6">d6</option>
-                			<option value="d8">d8</option>
-                			<option value="d10">d10</option>
-                			<option value="d12">d12</option>
-                		</select>
-                		<button	type="roll" 
-                			class="blank-roll-button" 
-                			value="!setattr --silent --name @{character_name} --mod --@{PS1PowerDie}|1" >
-                			ADD
-                		</button>
-            
-                        <div>
-                        	<fieldset class="repeating_powers1"> 
-                        		<input type="text" name="attr_PS1Power" />
-                        		<select name="attr_PS1PowerDie" placeholder="d4">
-                        			<option value="d4">d4</option>
-                        			<option value="d6">d6</option>
-                        			<option value="d8">d8</option>
-                        			<option value="d10">d10</option>
-                        			<option value="d12">d12</option>
-                        		</select>
-                        		<button	type="roll" 
-                        			class="blank-roll-button" 
-                        			value="!setattr --silent --name @{character_name} --mod --@{PS1PowerDie}|1" >
-                        			ADD
-                        		</button>
-                        	</fieldset> 
-                        </div>
-                    </div>
-            
-            		<div class="sheet-col">	
-                    	<h3>SFX and Limits</h3>
-                	    <textarea name="attr_PS1SFX" placeholder="SFX: Effect. blah blah blah OR Limit: Limitation. blah blah blah" ></textarea>
-                        <div>
-                        	<fieldset class="repeating_SFX1"> 
-                        	    <textarea name="attr_PS1SFX" placeholder="SFX: Effect. blah blah blah OR Limit: Limitation. blah blah blah" ></textarea>
-                        	</fieldset>
-                        </div>
-                    </div>
-                </div>
-
+           
+            <div style="border: 1px outset black; background-color: pink;"> 
                 <input type="checkbox" class="sheet-toggle-show" />
-                <span style="font-size:30px;"  vertical-align="middle">Power Set 2</span>
-    
-                <div class="sheet-body" id="PowerSet2">  
-                    <input type="text" class="input-text-wide" name="attr_PowerSet2" />
+                <span style="font-size:30px;"  vertical-align="middle">Power Set 1</span>
+                <div class="sheet-body" id="PowerSet1">  
+                    <input type="text" class="input-text-wide" name="attr_PowerSet1" id="attr_PowerSet1" />
                 	<br />	
                  	<div class="sheet-2colrow">
                 		<div class="sheet-col">	
                         	<h3>Powers</h3>
                 
-                    		<input type="text" name="attr_PS2Power" />
-                    		<select name="attr_PS2PowerDie" placeholder="d4">
+                    		<input type="text" name="attr_PS1Power" />
+                    		<select name="attr_PS1PowerDie" placeholder="d4">
                     			<option value="d4">d4</option>
                     			<option value="d6">d6</option>
                     			<option value="d8">d8</option>
@@ -228,12 +174,50 @@
                     		</select>
                     		<button	type="roll" 
                     			class="blank-roll-button" 
-                    			value="!setattr --silent --name @{character_name} --mod --@{PS2PowerDie}|1" >
+                    			value="!setattr --silent --name @{character_name} --mod --@{PS1PowerDie}|1" >
                     			ADD
                     		</button>
                 
                             <div>
-                            	<fieldset class="repeating_powers2"> 
+                            	<fieldset class="repeating_powers1"> 
+                            		<input type="text" name="attr_PS1Power" />
+                            		<select name="attr_PS1PowerDie" placeholder="d4">
+                            			<option value="d4">d4</option>
+                            			<option value="d6">d6</option>
+                            			<option value="d8">d8</option>
+                            			<option value="d10">d10</option>
+                            			<option value="d12">d12</option>
+                            		</select>
+                            		<button	type="roll" 
+                            			class="blank-roll-button" 
+                            			value="!setattr --silent --name @{character_name} --mod --@{PS1PowerDie}|1" >
+                            			ADD
+                            		</button>
+                            	</fieldset> 
+                            </div>
+                        </div>
+                
+                		<div class="sheet-col">	
+                        	<h3>SFX and Limits</h3>
+                    	    <textarea name="attr_PS1SFX" placeholder="SFX: Effect. blah blah blah OR Limit: Limitation. blah blah blah" ></textarea>
+                            <div>
+                            	<fieldset class="repeating_SFX1"> 
+                            	    <textarea name="attr_PS1SFX" placeholder="SFX: Effect. blah blah blah OR Limit: Limitation. blah blah blah" ></textarea>
+                            	</fieldset>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="border: 1px outset black; background-color: beige;">
+                        <input type="checkbox" class="sheet-toggle-show" />
+                        <span style="font-size:30px;"  vertical-align="middle">Power Set 2</span>
+            
+                        <div class="sheet-body" id="PowerSet2">  
+                            <input type="text" class="input-text-wide" name="attr_PowerSet2" />
+                        	<br />	
+                         	<div class="sheet-2colrow">
+                        		<div class="sheet-col">	
+                                	<h3>Powers</h3>
+                        
                             		<input type="text" name="attr_PS2Power" />
                             		<select name="attr_PS2PowerDie" placeholder="d4">
                             			<option value="d4">d4</option>
@@ -247,47 +231,49 @@
                             			value="!setattr --silent --name @{character_name} --mod --@{PS2PowerDie}|1" >
                             			ADD
                             		</button>
-                            	</fieldset> 
-                            </div>
-                        </div>
-                
-                		<div class="sheet-col">	
-                        	<h3>SFX and Limits</h3>
-                    	    <textarea name="attr_PS2SFX" placeholder="SFX: Effect. blah blah blah OR Limit: Limitation. blah blah blah" ></textarea>
-                            <div>
-                            	<fieldset class="repeating_SFX2"> 
+                        
+                                    <div>
+                                    	<fieldset class="repeating_powers2"> 
+                                    		<input type="text" name="attr_PS2Power" />
+                                    		<select name="attr_PS2PowerDie" placeholder="d4">
+                                    			<option value="d4">d4</option>
+                                    			<option value="d6">d6</option>
+                                    			<option value="d8">d8</option>
+                                    			<option value="d10">d10</option>
+                                    			<option value="d12">d12</option>
+                                    		</select>
+                                    		<button	type="roll" 
+                                    			class="blank-roll-button" 
+                                    			value="!setattr --silent --name @{character_name} --mod --@{PS2PowerDie}|1" >
+                                    			ADD
+                                    		</button>
+                                    	</fieldset> 
+                                    </div>
+                                </div>
+                        
+                        		<div class="sheet-col">	
+                                	<h3>SFX and Limits</h3>
                             	    <textarea name="attr_PS2SFX" placeholder="SFX: Effect. blah blah blah OR Limit: Limitation. blah blah blah" ></textarea>
-                            	</fieldset>
+                                    <div>
+                                    	<fieldset class="repeating_SFX2"> 
+                                    	    <textarea name="attr_PS2SFX" placeholder="SFX: Effect. blah blah blah OR Limit: Limitation. blah blah blah" ></textarea>
+                                    	</fieldset>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-    
-                    <input type="checkbox" class="sheet-toggle-show" />
-                    <span style="font-size:30px;"  vertical-align="middle">Power Set 3</span>
-    
-                    <div class="sheet-body" id="PowerSet3">  
-                        <input type="text" class="input-text-wide" name="attr_PowerSet3" />
-                    	<br />	
-                     	<div class="sheet-2colrow">
-                    		<div class="sheet-col">	
-                            	<h3>Powers</h3>
-                    
-                        		<input type="text" name="attr_PS3Power" />
-                        		<select name="attr_PS3PowerDie" placeholder="d4">
-                        			<option value="d4">d4</option>
-                        			<option value="d6">d6</option>
-                        			<option value="d8">d8</option>
-                        			<option value="d10">d10</option>
-                        			<option value="d12">d12</option>
-                        		</select>
-                        		<button	type="roll" 
-                        			class="blank-roll-button" 
-                        			value="!setattr --silent --name @{character_name} --mod --@{PS3PowerDie}|1" >
-                        			ADD
-                        		</button>
-                    
-                                <div>
-                                	<fieldset class="repeating_powers3"> 
+                        
+                        <div style="border: 1px outset black;  background-color: lightblue;">
+                            <input type="checkbox" class="sheet-toggle-show" />
+                            <span style="font-size:30px;"  vertical-align="middle">Power Set 3</span>
+            
+                            <div class="sheet-body" id="PowerSet3">  
+                                <input type="text" class="input-text-wide" name="attr_PowerSet3" />
+                            	<br />	
+                             	<div class="sheet-2colrow">
+                            		<div class="sheet-col">	
+                                    	<h3>Powers</h3>
+                            
                                 		<input type="text" name="attr_PS3Power" />
                                 		<select name="attr_PS3PowerDie" placeholder="d4">
                                 			<option value="d4">d4</option>
@@ -301,98 +287,115 @@
                                 			value="!setattr --silent --name @{character_name} --mod --@{PS3PowerDie}|1" >
                                 			ADD
                                 		</button>
-                                	</fieldset> 
-                                </div>
-                            </div>
-                    		<div class="sheet-col">	
-                            	<h3>SFX and Limits</h3>
-                        	    <textarea name="attr_PS3SFX" placeholder="SFX: Effect. blah blah blah OR Limit: Limitation. blah blah blah" ></textarea>
-                                <div>
-                                	<fieldset class="repeating_SFX3"> 
+                            
+                                        <div>
+                                        	<fieldset class="repeating_powers3"> 
+                                        		<input type="text" name="attr_PS3Power" />
+                                        		<select name="attr_PS3PowerDie" placeholder="d4">
+                                        			<option value="d4">d4</option>
+                                        			<option value="d6">d6</option>
+                                        			<option value="d8">d8</option>
+                                        			<option value="d10">d10</option>
+                                        			<option value="d12">d12</option>
+                                        		</select>
+                                        		<button	type="roll" 
+                                        			class="blank-roll-button" 
+                                        			value="!setattr --silent --name @{character_name} --mod --@{PS3PowerDie}|1" >
+                                        			ADD
+                                        		</button>
+                                        	</fieldset> 
+                                        </div>
+                                    </div>
+                            		<div class="sheet-col">	
+                                    	<h3>SFX and Limits</h3>
                                 	    <textarea name="attr_PS3SFX" placeholder="SFX: Effect. blah blah blah OR Limit: Limitation. blah blah blah" ></textarea>
-                                	</fieldset>
+                                        <div>
+                                        	<fieldset class="repeating_SFX3"> 
+                                        	    <textarea name="attr_PS3SFX" placeholder="SFX: Effect. blah blah blah OR Limit: Limitation. blah blah blah" ></textarea>
+                                        	</fieldset>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
             <hr />
-                      
-            <h3>Specialties</h3>
-        	<br />	
-        	<div class="sheet-2colrow">
-        		<div class="sheet-col">	
-        			<input type="text" name="attr_Specialty1" />
-        			<select name="attr_Specialty1_Die" placeholder="d8">
-            			<option value="d4">d4</option>
-            			<option value="d6">d6</option>
-            			<option value="d8">d8</option>
-            			<option value="d10">d10</option>
-            			<option value="d12">d12</option>
-            		</select>
-            		<button	type="roll" 
-            			class="blank-roll-button" 
-            			value="!setattr --silent --name @{character_name} --mod --@{Specialty1_Die}|1" >
-            			ADD
-            		</button>
-            
-                    <div>
-                    	<fieldset class="repeating_specialty1"> 
-                    		<input type="text" name="attr_Specialty1" />
-                    		<select name="attr_Specialty1_Die" placeholder="d4">
-                    			<option value="d4">d4</option>
-                    			<option value="d6">d6</option>
-                    			<option value="d8">d8</option>
-                    			<option value="d10">d10</option>
-                    			<option value="d12">d12</option>
-                    		</select>
-                    		<button	type="roll" 
-                    			class="blank-roll-button" 
-                    			value="!setattr --silent --name @{character_name} --mod --@{Specialty1_Die}|1" >
-                    			ADD
-                    		</button>
-                    	</fieldset> 
+            <div  style="border: 1px outset black;  background-color: orange;">          
+                <h3>Specialties</h3>
+            	<br />	
+            	<div class="sheet-2colrow">
+            		<div class="sheet-col">	
+            			<input type="text" name="attr_Specialty1" />
+            			<select name="attr_Specialty1_Die" placeholder="d8">
+                			<option value="d4">d4</option>
+                			<option value="d6">d6</option>
+                			<option value="d8">d8</option>
+                			<option value="d10">d10</option>
+                			<option value="d12">d12</option>
+                		</select>
+                		<button	type="roll" 
+                			class="blank-roll-button" 
+                			value="!setattr --silent --name @{character_name} --mod --@{Specialty1_Die}|1" >
+                			ADD
+                		</button>
+                
+                        <div>
+                        	<fieldset class="repeating_specialty1"> 
+                        		<input type="text" name="attr_Specialty1" />
+                        		<select name="attr_Specialty1_Die" placeholder="d4">
+                        			<option value="d4">d4</option>
+                        			<option value="d6">d6</option>
+                        			<option value="d8">d8</option>
+                        			<option value="d10">d10</option>
+                        			<option value="d12">d12</option>
+                        		</select>
+                        		<button	type="roll" 
+                        			class="blank-roll-button" 
+                        			value="!setattr --silent --name @{character_name} --mod --@{Specialty1_Die}|1" >
+                        			ADD
+                        		</button>
+                        	</fieldset> 
+                        </div>
                     </div>
-                </div>
-
-        		<div class="sheet-col">	
-        			<input type="text" name="attr_Specialty2" />
-        			<select name="attr_Specialty2_Die" placeholder="d8">
-            			<option value="d4">d4</option>
-            			<option value="d6">d6</option>
-            			<option value="d8">d8</option>
-            			<option value="d10">d10</option>
-            			<option value="d12">d12</option>
-            		</select>
-            		<button	type="roll" 
-            			class="blank-roll-button" 
-            			value="!setattr --silent --name @{character_name} --mod --@{Specialty2_Die}|1" >
-            			ADD
-            		</button>
-            
-                    <div>
-                    	<fieldset class="repeating_specialty2"> 
-                    		<input type="text" name="attr_Specialty2" />
-                    		<select name="attr_Specialty2_Die" placeholder="d4">
-                    			<option value="d4">d4</option>
-                    			<option value="d6">d6</option>
-                    			<option value="d8">d8</option>
-                    			<option value="d10">d10</option>
-                    			<option value="d12">d12</option>
-                    		</select>
-                    		<button	type="roll" 
-                    			class="blank-roll-button" 
-                    			value="!setattr --silent --name @{character_name} --mod --@{Specialty2_Die}|1" >
-                    			ADD
-                    		</button>
-                    	</fieldset> 
-                    </div>
-        		</div>
+    
+            		<div class="sheet-col">	
+            			<input type="text" name="attr_Specialty2" />
+            			<select name="attr_Specialty2_Die" placeholder="d8">
+                			<option value="d4">d4</option>
+                			<option value="d6">d6</option>
+                			<option value="d8">d8</option>
+                			<option value="d10">d10</option>
+                			<option value="d12">d12</option>
+                		</select>
+                		<button	type="roll" 
+                			class="blank-roll-button" 
+                			value="!setattr --silent --name @{character_name} --mod --@{Specialty2_Die}|1" >
+                			ADD
+                		</button>
+                
+                        <div>
+                        	<fieldset class="repeating_specialty2"> 
+                        		<input type="text" name="attr_Specialty2" />
+                        		<select name="attr_Specialty2_Die" placeholder="d4">
+                        			<option value="d4">d4</option>
+                        			<option value="d6">d6</option>
+                        			<option value="d8">d8</option>
+                        			<option value="d10">d10</option>
+                        			<option value="d12">d12</option>
+                        		</select>
+                        		<button	type="roll" 
+                        			class="blank-roll-button" 
+                        			value="!setattr --silent --name @{character_name} --mod --@{Specialty2_Die}|1" >
+                        			ADD
+                        		</button>
+                        	</fieldset> 
+                        </div>
+            		</div>
+            	</div>
         	</div>
-        	
-        	<div class="sheet-2colrow">
+        	<div class="sheet-2colrow" style="border: 1px outset black;  background-color: plum;">
         		<div class="sheet-col">	
                     <h3>Milestone</h3>
                     <input type="text" class="input-text-wide" name="attr_Milestone1" />
