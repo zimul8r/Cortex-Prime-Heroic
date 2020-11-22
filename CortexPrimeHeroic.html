@@ -326,65 +326,69 @@
         		<div class="sheet-col">	
         			<input type="text" name="attr_Specialty1" />
         			<select name="attr_Specialty1_Die" placeholder="d8">
-        				<option value="d4">d4</option>
-        				<option value="d6">d6</option>
-        				<option value="d8">d8</option>
-        				<option value="d10">d10</option>
-        				<option value="d12">d12</option>
-        			</select>
+            			<option value="d4">d4</option>
+            			<option value="d6">d6</option>
+            			<option value="d8">d8</option>
+            			<option value="d10">d10</option>
+            			<option value="d12">d12</option>
+            		</select>
             		<button	type="roll" 
             			class="blank-roll-button" 
             			value="!setattr --silent --name @{character_name} --mod --@{Specialty1_Die}|1" >
             			ADD
             		</button>
-            		<br />
-        
+            
+                    <div>
+                    	<fieldset class="repeating_specialty1"> 
+                    		<input type="text" name="attr_Specialty1" />
+                    		<select name="attr_Specialty1_Die" placeholder="d4">
+                    			<option value="d4">d4</option>
+                    			<option value="d6">d6</option>
+                    			<option value="d8">d8</option>
+                    			<option value="d10">d10</option>
+                    			<option value="d12">d12</option>
+                    		</select>
+                    		<button	type="roll" 
+                    			class="blank-roll-button" 
+                    			value="!setattr --silent --name @{character_name} --mod --@{Specialty1_Die}|1" >
+                    			ADD
+                    		</button>
+                    	</fieldset> 
+                    </div>
+                </div>
+
+        		<div class="sheet-col">	
         			<input type="text" name="attr_Specialty2" />
         			<select name="attr_Specialty2_Die" placeholder="d8">
-        				<option value="d4">d4</option>
-        				<option value="d6">d6</option>
-        				<option value="d8">d8</option>
-        				<option value="d10">d10</option>
-        				<option value="d12">d12</option>
-        			</select>
+            			<option value="d4">d4</option>
+            			<option value="d6">d6</option>
+            			<option value="d8">d8</option>
+            			<option value="d10">d10</option>
+            			<option value="d12">d12</option>
+            		</select>
             		<button	type="roll" 
             			class="blank-roll-button" 
             			value="!setattr --silent --name @{character_name} --mod --@{Specialty2_Die}|1" >
             			ADD
             		</button>
-        			<br />
-        		</div>
-        
-        		<div class="sheet-col">	
-        			<input type="text" name="attr_Specialty3" />
-        			<select name="attr_Specialty3_Die" placeholder="d8">
-        				<option value="d4">d4</option>
-        				<option value="d6">d6</option>
-        				<option value="d8">d8</option>
-        				<option value="d10">d10</option>
-        				<option value="d12">d12</option>
-        			</select>
-            		<button	type="roll" 
-            			class="blank-roll-button" 
-            			value="!setattr --silent --name @{character_name} --mod --@{Specialty3_Die}|1" >
-            			ADD
-            		</button>
-        			<br />
-        
-        			<input type="text" name="attr_Specialty4" />
-        			<select name="attr_Specialty4_Die" placeholder="d8">
-        				<option value="d4">d4</option>
-        				<option value="d6">d6</option>
-        				<option value="d8">d8</option>
-        				<option value="d10">d10</option>
-        				<option value="d12">d12</option>
-        			</select>
-            		<button	type="roll" 
-            			class="blank-roll-button" 
-            			value="!setattr --silent --name @{character_name} --mod --@{Specialty4_Die}|1" >
-            			ADD
-            		</button>
-        			<br />
+            
+                    <div>
+                    	<fieldset class="repeating_specialty2"> 
+                    		<input type="text" name="attr_Specialty2" />
+                    		<select name="attr_Specialty2_Die" placeholder="d4">
+                    			<option value="d4">d4</option>
+                    			<option value="d6">d6</option>
+                    			<option value="d8">d8</option>
+                    			<option value="d10">d10</option>
+                    			<option value="d12">d12</option>
+                    		</select>
+                    		<button	type="roll" 
+                    			class="blank-roll-button" 
+                    			value="!setattr --silent --name @{character_name} --mod --@{Specialty2_Die}|1" >
+                    			ADD
+                    		</button>
+                    	</fieldset> 
+                    </div>
         		</div>
         	</div>
         	
