@@ -1,26 +1,31 @@
 button[type=roll].sheet-blank-roll-button::before { content: ''; }
 
-button[type=roll].sheet-blank-roll-button { 
- padding: 0px 8px 0px 0px; 
- height: 30px;
-}
+button[type=roll].sheet-blank-roll-button { padding: 5px 8px 2px 0px; }
 
 input[type=checkbox] { 
- width: 15px; 
- height: 15px; 
+ width: 32px; 
+ height: 32px; 
  background-color: green;
- vertical-align: 0px;
+ display:inline-block;
+ vertical-align: middle;
 }
 
-input[type=text].sheet-input-text-wide { 
- width: 400px; 
- height: 32px; 
+textarea { 
+ height: 32px;
+ width: 500px;
+ display:inline-block;
+ vertical-align: middle;
+}
+
+textarea.sheet-npc-textarea { 
+ height: 32px;
+ width: 300px;
  display:inline-block;
  vertical-align: middle;
 }
 
 select {
- width: 75px;
+ width: 60px;
 }
 
 select.sheet-select-wide {
@@ -33,13 +38,6 @@ label {
  display:inline-block;
 }
 
-textarea { 
- height: 34px;
- width 3300px;
- display:inline-block;
- vertical-align: middle;
-}
-
 input.sheet-toggle-show:not(:checked) ~ div.sheet-body,
 input.sheet-toggle-hide:checked ~ div.sheet-body {
     display: none;
@@ -47,14 +45,14 @@ input.sheet-toggle-hide:checked ~ div.sheet-body {
 
 /*Configure the tab buttons*/
 .sheet-character,
-.sheet-config,
+.sheet-npc,
 .sheet-dice-only {
 	display: none;
 }
 
 /* show the selected tab */
 .sheet-tabstoggle[value="character"] ~ div.sheet-character,
-.sheet-tabstoggle[value="configuration"] ~ div.sheet-config,
+.sheet-tabstoggle[value="npc"] ~ div.sheet-npc,
 .sheet-tabstoggle[value="dice-only"] ~ div.sheet-dice-only {
 	display: block;
 }
