@@ -1,58 +1,83 @@
-button[type=roll].sheet-blank-roll-button::before { content: ''; }
+button[type=roll].sheet-blank-roll-button::before { 
+ content: '';
+ margin: 1px;
+}
 
-button[type=roll].sheet-blank-roll-button { padding: 5px 8px 2px 0px; }
+button[type=roll].sheet-blank-roll-button { 
+ padding: 0px 8px 0px 0px; 
+ margin: 1px;
+ height: 30px;
+}
 
 input[type=checkbox] { 
- width: 32px; 
- height: 32px; 
+ width: 15px; 
+ height: 15px; 
+ margin: 1px;
  background-color: green;
- display:inline-block;
- vertical-align: middle;
+ vertical-align: 0px;
 }
 
-textarea { 
- height: 32px;
- width: 500px;
- display:inline-block;
- vertical-align: middle;
-}
-
-textarea.sheet-npc-textarea { 
- height: 32px;
- width: 300px;
+input[type=text].sheet-input-text-wide { 
+ width: 400px; 
+ height: 32px; 
+ margin: 1px;
  display:inline-block;
  vertical-align: middle;
 }
 
 select {
- width: 60px;
+ width: 75px;
+ margin: 1px;
 }
 
 select.sheet-select-wide {
  width: 100px;
+ margin: 1px;
 }
 
 label {
  text-align: right;
  width: 75px;
+ margin: 1px;
  display:inline-block;
+}
+
+textarea { 
+ height: 34px;
+ width 3300px;
+ margin: 1px;
+ display:inline-block;
+ vertical-align: middle;
+}
+
+hr.myhrline {
+ margin: 1px;
+}
+
+table {
+ margin: 1px;
+}
+
+div {
+ margin: 1px;
 }
 
 input.sheet-toggle-show:not(:checked) ~ div.sheet-body,
 input.sheet-toggle-hide:checked ~ div.sheet-body {
     display: none;
+    margin: 1px;
 }
 
 /*Configure the tab buttons*/
 .sheet-character,
-.sheet-npc,
+.sheet-config,
 .sheet-dice-only {
 	display: none;
 }
 
 /* show the selected tab */
 .sheet-tabstoggle[value="character"] ~ div.sheet-character,
-.sheet-tabstoggle[value="npc"] ~ div.sheet-npc,
+.sheet-tabstoggle[value="configuration"] ~ div.sheet-config,
 .sheet-tabstoggle[value="dice-only"] ~ div.sheet-dice-only {
 	display: block;
 }
