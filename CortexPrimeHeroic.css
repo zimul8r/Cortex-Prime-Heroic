@@ -70,14 +70,14 @@ input.sheet-toggle-hide:checked ~ div.sheet-body {
 
 /*Configure the tab buttons*/
 .sheet-character,
-.sheet-config,
+.sheet-npc,
 .sheet-dice-only {
 	display: none;
 }
 
 /* show the selected tab */
 .sheet-tabstoggle[value="character"] ~ div.sheet-character,
-.sheet-tabstoggle[value="configuration"] ~ div.sheet-config,
+.sheet-tabstoggle[value="npc"] ~ div.sheet-npc,
 .sheet-tabstoggle[value="dice-only"] ~ div.sheet-dice-only {
 	display: block;
 }
