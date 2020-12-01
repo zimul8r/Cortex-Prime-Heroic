@@ -9,7 +9,7 @@
         <div>
             <button type="action" name="act_character" >Heroic Character Sheet</button>
             <button type="action" name="act_dice-only" >Dice Pool Roller Only</button>
-            <button type="action" name="act_configuration" >Heroic NPC Sheet</button>
+            <button type="action" name="act_npc" >Heroic NPC Sheet</button>
         </div>
         <input type='hidden' class='sheet-tabstoggle' name='attr_sheetTab'  value='character'  />
 
@@ -450,6 +450,194 @@
                 </div>
             </span>
         </div>
+        <div class='sheet-npc'>
+            <div class='sheet-dice-bar'>
+            	<table>
+            		<tr>
+            			<td style="text-align:center">
+            				<button style="font-size:0;height:30px;"  name="roll_d4"  type="roll" value="/roll d4">	
+            					<img src="https://cdn.pixabay.com/photo/2012/05/07/03/41/triangle-47852_960_720.png" width="30" height="30"/>	
+            				</button>
+            			</td>
+            			<td style="text-align:center">
+            				<button name="roll_d6"  type="roll" value="/roll d6" style="font-size:0;height:30px;">
+            					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/37/die-308887__340.png" width="30" height="30"/>
+            				</button>
+            			</td>
+            			<td style="text-align:center">
+            				<button name="roll_d8"  type="roll" value="/roll d8" style="font-size:0;height:30px;">
+            					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024223__340.png" width="30" height="30"/>
+            				</button>
+            			</td>
+            			<td style="text-align:center">
+            				<button name="roll_d10"  type="roll" value="/roll d10" style="font-size:0;height:30px;">		  
+            					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/36/dice-308824__340.png" width="30" height="30"/>
+            				</button>
+            			</td>
+            			<td style="text-align:center">
+            				<button name="roll_d12"  type="roll" value="/roll d12" style="font-size:0;height:30px;">
+            					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024222__340.png" width="30" height="30"/>
+            				</button>
+            			</td>
+            			<td style="min-width: 60;">
+            				<button	type="roll" 
+            					style="font-size: 20px; text-align: center; width: 30px; height: 30px;" 
+            					value="/roll {[[0+@{d4}]]d4 + [[0+@{d6}]]d6 + [[0+@{d8}]]d8 + [[0+@{d10}]]d10 + [[0+@{d12}]]d12}k2"> </button>
+            			</td>
+            		</tr>
+            		<tr>
+            			<td>
+            				<input type="number" name="attr_d4" id="attr_d4" min="0" max="99" />
+            			</td>
+            			<td>
+            				<input type="number" name="attr_d6" id="attr_d6" min="0" max="99" />
+            			</td>
+            			<td>
+            				<input type="number" name="attr_d8" id="attr_d8" min="0" max="99" />
+            			</td>
+            			<td>
+            				<input type="number" name="attr_d10" id="attr_d10" min="0" max="99" />
+            			</td>
+            			<td>
+            				<input type="number" name="attr_d12" id="attr_d12" min="0" max="99" />
+            			</td>
+            			<td>
+            				<button	type="roll" 
+            					class="blank-roll-button" 
+            					value="!setattr --silent --name @{character_name} --d4|'' --d6|'' --d8|'' --d10|'' --d12|'' --PoolTracker|''" style="
+            					height:30px;">
+            				CLEAR
+            				</button>
+            			</td>
+            		</tr>
+            	</table>
+            
+                <label for="attr_PoolTracker">Added:</label>
+                <textarea rows="1" name="attr_PoolTracker"></textarea>
+                <hr>
+            </div><!-- Dice Bar close --> 
+    
+            <div class="sheet-body" id="npcTraits">  
+            	<div class="sheet-2colrow">
+            		<div class="sheet-col">	
+            			<h3>Name</h3>
+            			<input type="text" name="attr_character_name" />
+            			<br />
+            
+                    	<h3>Traits</h3>
+            
+                		<input type="text" name="attr_Trait1" />
+                		<select name="attr_Trait1Die" placeholder="d4">
+                			<option value="d4">d4</option>
+                			<option value="d6">d6</option>
+                			<option value="d8">d8</option>
+                			<option value="d10">d10</option>
+                			<option value="d12">d12</option>
+                		</select>
+                		<button	type="roll" 
+                			class="blank-roll-button" 
+                			value="!setattr --silent --name @{character_name} --mod --@{Trait1Die}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{Trait1}" >
+                			ADD
+                		</button>
+            
+                        <div>
+                        	<fieldset class="repeating_traits"> 
+                        		<input type="text" name="attr_Trait1" />
+                        		<select name="attr_Trait1Die" placeholder="d4">
+                        			<option value="d4">d4</option>
+                        			<option value="d6">d6</option>
+                        			<option value="d8">d8</option>
+                        			<option value="d10">d10</option>
+                        			<option value="d12">d12</option>
+                        		</select>
+                        		<button	type="roll" 
+                        			class="blank-roll-button" 
+                        			value="!setattr --silent --name @{character_name} --mod --@{Trait1Die}|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{Trait1}" >
+                        			ADD
+                        		</button>
+                        	</fieldset> 
+                        </div>
+
+                    	<h3>SFX</h3>
+                	    <textarea class="sheet-npc-textarea" name="attr_npcSFX" placeholder="SFX: Effect. blah blah blah OR Limit: Limitation. blah blah blah" ></textarea>
+                        <div>
+                        	<fieldset class="repeating_npcSFX"> 
+                        	    <textarea class="sheet-npc-textarea" type="npc" name="attr_npcSFX" placeholder="SFX: Effect. blah blah blah OR Limit: Limitation. blah blah blah" ></textarea>
+                        	</fieldset>
+                        </div>
+            			<br />
+            
+                    	<h3>Mob/Boss Dice</h3>
+            
+                		<input type="number" name="attr_Mob1" />
+                		<select name="attr_MobDie" placeholder="d4">
+                			<option value="d4">d4</option>
+                			<option value="d6">d6</option>
+                			<option value="d8">d8</option>
+                			<option value="d10">d10</option>
+                			<option value="d12">d12</option>
+                		</select>
+                		<button	type="roll" 
+                			class="blank-roll-button" 
+                			value="!setattr --silent --name @{character_name} --mod --@{MobDie}|@{Mob1} \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+Mob" >
+                			ADD
+                		</button>
+            
+
+                    </div>
+
+            		<div class="sheet-col">
+            			<h3>Description</h3>
+            			<textarea class="sheet-npc-textarea" type="npc" name="attr_Description"></textarea>
+            			<br />
+            
+                        <div style="border: 1px outset black;  background-color: silver;">
+                			<h3>Distinction</h3>
+                			<input type="text" name="attr_Distinction1" />
+                			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d8|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{Distinction1}">ADD d8</button>
+                			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d4|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{Distinction1}">ADD d4</button>
+                			<br />
+                            <div>
+                            	<fieldset class="repeating_Distinction1"> 
+                        			<input type="checkbox" class="largerCheckbox" name="attr_Distinction1_SFX1_Check" value="checked"> 
+                        			<textarea class="sheet-npc-textarea" type="npc" name="attr_Distinction1_SFX1" placeholder="SFX: Hinder: Gain a PP when you switch out this distinction's d8 for a d4."></textarea>
+                            	</fieldset>
+                            </div>
+            			</div>
+            
+                        <div style="border: 1px outset black;  background-color: violet;">
+                			<h3>Distinction</h3>
+                			<input type="text" name="attr_Distinction2" />
+                			<button	type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d8|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{Distinction2}">ADD d8</button>
+                			<button type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d4|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{Distinction2}">ADD d4</button>
+                			<br />
+                            <div>
+                            	<fieldset class="repeating_Distinction2"> 
+                        			<input type="checkbox" class="largerCheckbox" name="attr_Distinction2_SFX1_Check" value="checked"> 
+                        			<textarea class="sheet-npc-textarea" type="npc" name="attr_Distinction2_SFX1" placeholder="SFX: Hinder: Gain a PP when you switch out this distinction's d8 for a d4."></textarea>
+                            	</fieldset>
+                            </div>
+                        </div>
+                        
+                        <div style="border: 1px outset black;  background-color: RosyBrown;">
+                			<h3>Distinction</h3>
+                			<input type="text" name="attr_Distinction3" />
+                			<button type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d8|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{Distinction3}">ADD d8</button>
+                			<button type="roll" class="blank-roll-button" value="!setattr --silent --name @{character_name} --mod --d4|1 \n!setattr --name @{character_name} --silent --PoolTracker|@{PoolTracker}+@{Distinction3}">ADD d4</button>
+                			<br />
+
+                            <div>
+                            	<fieldset class="repeating_Distinction3"> 
+                        			<input type="checkbox" class="largerCheckbox" name="attr_Distinction3_SFX1_Check" value="checked"> 
+                        			<textarea class="sheet-npc-textarea" type="npc" name="attr_Distinction3_SFX1" placeholder="SFX: Hinder: Gain a PP when you switch out this distinction's d8 for a d4."></textarea>
+                            	</fieldset>
+                            </div>
+                			<br />
+            		    </div>
+            		</div>
+            	</div>
+            </div>
+        </div>
         <div class='sheet-dice-only'>
             <div class='sheet-dice-bar'>
             	<table>
@@ -482,7 +670,7 @@
             			<td style="min-width: 60;">
             				<button	type="roll" 
             					style="font-size: 20px; text-align: center; width: 30px; height: 30px;" 
-            					value="/roll [[0+@{d4}]]d4 + [[0+@{d6}]]d6 + [[0+@{d8}]]d8 + [[0+@{d10}]]d10 + [[0+@{d12}]]d12"> </button>
+            					value="/roll {[[0+@{d4}]]d4 + [[0+@{d6}]]d6 + [[0+@{d8}]]d8 + [[0+@{d10}]]d10 + [[0+@{d12}]]d12}k2"> </button>
             			</td>
             		</tr>
             		<tr>
@@ -504,7 +692,8 @@
             			<td>
             				<button	type="roll" 
             					class="blank-roll-button" 
-            					value="!setattr --silent --name @{character_name} --d4|'' --d6|'' --d8|'' --d10|'' --d12|''" style="height:30px">
+            					value="!setattr --silent --name @{character_name} --d4|'' --d6|'' --d8|'' --d10|'' --d12|'' --PoolTracker|''" style="
+            					height:30px;">
             				CLEAR
             				</button>
             			</td>
@@ -512,13 +701,9 @@
             	</table>
             </div><!-- Dice Bar close --> 
         </div>
-        <div class='sheet-config'>
-            <h2>Heroic NPC</h2>
-            <span>Heroic NPC Sheet TBD</span> 
-        </div>
-        
+		
         <script type="text/worker">
-            const buttonlist = ["character","dice-only","configuration"];
+            const buttonlist = ["character","dice-only","npc"];
             buttonlist.forEach(button => {
                 on(`clicked:${button}`, function() {
                     setAttrs({
