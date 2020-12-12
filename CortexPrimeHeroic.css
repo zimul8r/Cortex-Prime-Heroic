@@ -18,7 +18,7 @@ input[type=checkbox] {
 }
 
 input[type=text].sheet-input-text-wide { 
- width: 400px; 
+ width: 300px; 
  height: 32px; 
  margin: 1px;
  display:inline-block;
@@ -44,9 +44,9 @@ label {
 
 textarea { 
  height: 34px;
- width 3300px;
+ width: 100%;
  margin: 1px;
- display:inline-block;
+ resize: vertical;
  vertical-align: middle;
 }
 
@@ -60,6 +60,7 @@ table {
 
 div {
  margin: 1px;
+ width: 100%;
 }
 
 input.sheet-toggle-show:not(:checked) ~ div.sheet-body,
@@ -70,14 +71,14 @@ input.sheet-toggle-hide:checked ~ div.sheet-body {
 
 /*Configure the tab buttons*/
 .sheet-character,
-.sheet-npc,
-.sheet-dice-only {
+.sheet-dice-only, 
+.sheet-npc {
 	display: none;
 }
 
 /* show the selected tab */
 .sheet-tabstoggle[value="character"] ~ div.sheet-character,
-.sheet-tabstoggle[value="npc"] ~ div.sheet-npc,
-.sheet-tabstoggle[value="dice-only"] ~ div.sheet-dice-only {
+.sheet-tabstoggle[value="dice-only"] ~ div.sheet-dice-only,
+.sheet-tabstoggle[value="npc"] ~ div.sheet-npc {
 	display: block;
 }
