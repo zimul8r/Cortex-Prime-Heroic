@@ -18,66 +18,139 @@
             <span>
 
                 <div class='sheet-dice-bar'>
-                	<table>
-                		<tr>
-                			<td style="text-align:center">
-                				<button style="font-size:0;height:30px;"  name="roll_d4"  type="roll" value="/roll d4">	
-                					<img src="https://cdn.pixabay.com/photo/2012/05/07/03/41/triangle-47852_960_720.png" width="30" height="30"/>	
-                				</button>
-                			</td>
-                			<td style="text-align:center">
-                				<button name="roll_d6"  type="roll" value="/roll d6" style="font-size:0;height:30px;">
-                					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/37/die-308887__340.png" width="30" height="30"/>
-                				</button>
-                			</td>
-                			<td style="text-align:center">
-                				<button name="roll_d8"  type="roll" value="/roll d8" style="font-size:0;height:30px;">
-                					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024223__340.png" width="30" height="30"/>
-                				</button>
-                			</td>
-                			<td style="text-align:center">
-                				<button name="roll_d10"  type="roll" value="/roll d10" style="font-size:0;height:30px;">		  
-                					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/36/dice-308824__340.png" width="30" height="30"/>
-                				</button>
-                			</td>
-                			<td style="text-align:center">
-                				<button name="roll_d12"  type="roll" value="/roll d12" style="font-size:0;height:30px;">
-                					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024222__340.png" width="30" height="30"/>
-                				</button>
-                			</td>
-                			<td style="min-width: 60;">
-                				<button	type="roll" 
-                					class="blank-roll-button" 
-                					value="/roll {[[0+@{d4}]]d4 + [[0+@{d6}]]d6 + [[0+@{d8}]]d8 + [[0+@{d10}]]d10 + [[0+@{d12}]]d12}k2">
-                				    ROLL
-                				</button>
-                			</td>
-                		</tr>
-                		<tr>
-                			<td>
-                				<input type="number" name="attr_d4" id="attr_d4" min="0" max="99" />
-                			</td>
-                			<td>
-                				<input type="number" name="attr_d6" id="attr_d6" min="0" max="99" />
-                			</td>
-                			<td>
-                				<input type="number" name="attr_d8" id="attr_d8" min="0" max="99" />
-                			</td>
-                			<td>
-                				<input type="number" name="attr_d10" id="attr_d10" min="0" max="99" />
-                			</td>
-                			<td>
-                				<input type="number" name="attr_d12" id="attr_d12" min="0" max="99" />
-                			</td>
-                			<td>
-                				<button	type="roll" 
-                					class="blank-roll-button" 
-                					value="!setattr ?{If you are sure| click Submit} --silent --name @{character_name} --d4|'' --d6|'' --d8|'' --d10|'' --d12|''" style="height:30px">
-                				CLEAR
-                				</button>
-                			</td>
-                		</tr>
-                	</table>
+                 	<div class="sheet-2colrow">
+                		<div class="sheet-col">	
+                        	<table style="display: inline-block;">
+                        		<tr>
+                        			<td style="text-align:center">
+                        				<button style="font-size:0;height:30px;"  name="roll_d4"  type="roll" value="/roll d4">	
+                        					<img src="https://cdn.pixabay.com/photo/2012/05/07/03/41/triangle-47852_960_720.png" width="30" height="30"/>	
+                        				</button>
+                        			</td>
+                        			<td style="text-align:center">
+                        				<button name="roll_d6"  type="roll" value="/roll d6" style="font-size:0;height:30px;">
+                        					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/37/die-308887__340.png" width="30" height="30"/>
+                        				</button>
+                        			</td>
+                        			<td style="text-align:center">
+                        				<button name="roll_d8"  type="roll" value="/roll d8" style="font-size:0;height:30px;">
+                        					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024223__340.png" width="30" height="30"/>
+                        				</button>
+                        			</td>
+                        			<td style="text-align:center">
+                        				<button name="roll_d10"  type="roll" value="/roll d10" style="font-size:0;height:30px;">		  
+                        					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/36/dice-308824__340.png" width="30" height="30"/>
+                        				</button>
+                        			</td>
+                        			<td style="text-align:center">
+                        				<button name="roll_d12"  type="roll" value="/roll d12" style="font-size:0;height:30px;">
+                        					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024222__340.png" width="30" height="30"/>
+                        				</button>
+                        			</td>
+                        			<td style="min-width: 60;">
+                        				<button	type="roll" 
+                        					class="blank-roll-button" 
+                        					style="height:20px;"
+                        					value="/roll {[[0+@{d4}]]d4 + [[0+@{d6}]]d6 + [[0+@{d8}]]d8 + [[0+@{d10}]]d10 + [[0+@{d12}]]d12}k2">
+                        				    ROLL
+                        				</button>
+                        			</td>
+                        		</tr>
+                        		<tr>
+                        			<td>
+                        				<input type="number" name="attr_d4" id="attr_d4" min="0" max="99" />
+                        			</td>
+                        			<td>
+                        				<input type="number" name="attr_d6" id="attr_d6" min="0" max="99" />
+                        			</td>
+                        			<td>
+                        				<input type="number" name="attr_d8" id="attr_d8" min="0" max="99" />
+                        			</td>
+                        			<td>
+                        				<input type="number" name="attr_d10" id="attr_d10" min="0" max="99" />
+                        			</td>
+                        			<td>
+                        				<input type="number" name="attr_d12" id="attr_d12" min="0" max="99" />
+                        			</td>
+                        			<td>
+                        				<button	type="roll" 
+                        					class="blank-roll-button" 
+                        					style="height:20px;"
+                        					value="!setattr ?{If you are sure| click Submit} --silent --name @{character_name} --d4|'' --d6|'' --d8|'' --d10|'' --d12|''">
+                        				CLEAR
+                        				</button>
+                        			</td>
+                        		</tr>
+                        	</table>
+                	    </div>
+                		<div class="sheet-col">	
+                        	<table>
+                        	    <tr>
+                                    <h3 style="text-align:center">Dice Pool Actions</h3>
+                        	    </tr>
+                        	    <tr>
+                        	        <div style="text-align:center">
+                                        <input type="radio" name="attr_dradio" value="4">
+                                        d4&nbsp;&nbsp;&nbsp;
+                                        <input type="radio" name="attr_dradio" value="6">
+                                        d6&nbsp;&nbsp;&nbsp;
+                                        <input type="radio" name="attr_dradio" value="8">
+                                        d8&nbsp;&nbsp;&nbsp;
+                                        <input type="radio" name="attr_dradio" value="10">
+                                        d10&nbsp;&nbsp;&nbsp;
+                                        <input type="radio" name="attr_dradio" value="12">
+                                        d12
+                                    </div>
+                                </tr>
+                                <tr>
+                        	        <div style="text-align:center">
+                        				<button	type="roll" 
+                        					class="blank-roll-button" 
+                        					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|1 ">
+                        				2x
+                        				</button>
+                        				<button	type="roll" 
+                        					class="blank-roll-button" 
+                        					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}+2]]|1 ">
+                        				UP
+                        				</button>
+                        				<button	type="roll" 
+                        					class="blank-roll-button" 
+                        					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}-2]]|1 ">
+                        				DN
+                        				</button>
+                        				<button	type="roll" 
+                        					class="blank-roll-button" 
+                        					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}-2]]|2 ">
+                        				/2
+                        				</button>
+                        				<button	type="roll" 
+                        					class="blank-roll-button" 
+                        					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}-4]]|3 ">
+                        				/3
+                        				</button>
+                        				<button	type="roll" 
+                        					class="blank-roll-button" 
+                        					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}-6]]|4 ">
+                        				/4
+                        				</button>
+                        				<button	type="roll" 
+                        					class="blank-roll-button" 
+                        					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-2 --d[[@{dradio}+2]]|1 ">
+                        				2->1
+                        				</button>
+                                    </div>
+                                </tr>                        
+                            </table>
+                	    </div>
+            	    </div>
                 </div><!-- Dice Bar close --> 
                 <hr class="myhrline"/>
                 
@@ -188,7 +261,7 @@
                          	<div class="sheet-2colrow">
                         		<div class="sheet-col">	
                                 	<h3>Power Set 1</h3>
-                                    <input style="font-variant: small-caps;height: 32px;width: 100%;margin: 1px;display:inline-block;vertical-align: middle;" type="text" name="attr_PowerSet1"/>
+                                    <input style="text-align:center;font-weight: bold;font-variant: small-caps;height: 32px;width: 100%;margin: 1px;display:inline-block;vertical-align: middle;" type="text" name="attr_PowerSet1"/>
                                 	<br />	
                                 	<h4>Powers</h4>
                         
@@ -248,7 +321,7 @@
                          	<div class="sheet-2colrow">
                         		<div class="sheet-col">	
                                 	<h3>Power Set 2</h3>
-                                    <input style="font-variant: small-caps;height: 32px;width: 100%;margin: 1px;display:inline-block;vertical-align: middle;" type="text" name="attr_PowerSet2"/>
+                                    <input style="text-align:center;font-weight: bold;font-variant: small-caps;height: 32px;width: 100%;margin: 1px;display:inline-block;vertical-align: middle;" type="text" name="attr_PowerSet2"/>
                                 	<br />	
                                 	<h4>Powers</h4>
                         
@@ -305,7 +378,7 @@
                          	<div class="sheet-2colrow">
                         		<div class="sheet-col">	
                                 	<h3>Power Set 3</h3>
-                                    <input style="font-variant: small-caps;height: 32px;width: 100%;margin: 1px;display:inline-block;vertical-align: middle;" type="text" name="attr_PowerSet3"/>
+                                    <input style="text-align:center;font-weight: bold;font-variant: small-caps;height: 32px;width: 100%;margin: 1px;display:inline-block;vertical-align: middle;" type="text" name="attr_PowerSet3"/>
                                 	<br />	
                                 	<h4>Powers</h4>
                         
@@ -432,7 +505,7 @@
                     	<div class="sheet-2colrow" style="border: 1px outset black;  background-color: plum;">
                     		<div class="sheet-col">	
                                 <h3>Milestone</h3>
-                                <input  style="width: 95%"type="text" class="input-text-wide" name="attr_Milestone1" />
+                                <input style="text-align:center;font-variant: small-caps;font-weight: bold;width: 95%" type="text" class="input-text-wide" name="attr_Milestone1" />
                                 <div >
                                     <textarea style="width: 95%" name="attr_Milestone1_1XP" placeholder="1 XP when..."></textarea>
                                 </div>
@@ -444,8 +517,10 @@
                                 </div>
                             </div>
                     		<div class="sheet-col">	
-                            	<h3>Milestone</h3>
-                                <input type="text" class="input-text-wide" name="attr_Milestone2" />
+                            	<h3 style="display: inline-block;">Milestone</h3>
+                        		<input style="float:right;display: inline-block;"type="number" name="attr_XP" min="0"/>
+                        		<label style="float:right;display: inline-block;">XP:</label> 
+                                <input style="text-align:center;font-variant: small-caps;font-weight: bold;width: 95%" type="text" class="input-text-wide" name="attr_Milestone2" />
                                 <div>
                                 	<textarea style="width: 95%" name="attr_Milestone2_1XP" placeholder="1 XP when..."></textarea>
                                 </div>
@@ -463,64 +538,139 @@
         </div>
         <div class='sheet-dice-only'>
             <div class='sheet-dice-bar'>
-            	<table>
-            		<tr>
-            			<td style="text-align:center">
-            				<button style="font-size:0;height:30px;"  name="roll_d4"  type="roll" value="/roll d4">	
-            					<img src="https://cdn.pixabay.com/photo/2012/05/07/03/41/triangle-47852_960_720.png" width="30" height="30"/>	
-            				</button>
-            			</td>
-            			<td style="text-align:center">
-            				<button name="roll_d6"  type="roll" value="/roll d6" style="font-size:0;height:30px;">
-            					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/37/die-308887__340.png" width="30" height="30"/>
-            				</button>
-            			</td>
-            			<td style="text-align:center">
-            				<button name="roll_d8"  type="roll" value="/roll d8" style="font-size:0;height:30px;">
-            					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024223__340.png" width="30" height="30"/>
-            				</button>
-            			</td>
-            			<td style="text-align:center">
-            				<button name="roll_d10"  type="roll" value="/roll d10" style="font-size:0;height:30px;">		  
-            					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/36/dice-308824__340.png" width="30" height="30"/>
-            				</button>
-            			</td>
-            			<td style="text-align:center">
-            				<button name="roll_d12"  type="roll" value="/roll d12" style="font-size:0;height:30px;">
-            					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024222__340.png" width="30" height="30"/>
-            				</button>
-            			</td>
-            			<td style="min-width: 60;">
-            				<button	type="roll" 
-            					style="font-size: 20px; text-align: center; width: 30px; height: 30px;" 
-            					value="/roll [[0+@{d4}]]d4 + [[0+@{d6}]]d6 + [[0+@{d8}]]d8 + [[0+@{d10}]]d10 + [[0+@{d12}]]d12"> </button>
-            			</td>
-            		</tr>
-            		<tr>
-            			<td>
-            				<input type="number" name="attr_d4" id="attr_d4" min="0" max="99" />
-            			</td>
-            			<td>
-            				<input type="number" name="attr_d6" id="attr_d6" min="0" max="99" />
-            			</td>
-            			<td>
-            				<input type="number" name="attr_d8" id="attr_d8" min="0" max="99" />
-            			</td>
-            			<td>
-            				<input type="number" name="attr_d10" id="attr_d10" min="0" max="99" />
-            			</td>
-            			<td>
-            				<input type="number" name="attr_d12" id="attr_d12" min="0" max="99" />
-            			</td>
-            			<td>
-            				<button	type="roll" 
-            					class="blank-roll-button" 
-            					value="!setattr ?{If you are sure| click Submit} --silent --name @{character_name} --d4|'' --d6|'' --d8|'' --d10|'' --d12|''" style="height:30px">
-            				CLEAR
-            				</button>
-            			</td>
-            		</tr>
-            	</table>
+             	<div class="sheet-2colrow">
+            		<div class="sheet-col">	
+                    	<table style="display: inline-block;">
+                    		<tr>
+                    			<td style="text-align:center">
+                    				<button style="font-size:0;height:30px;"  name="roll_d4"  type="roll" value="/roll d4">	
+                    					<img src="https://cdn.pixabay.com/photo/2012/05/07/03/41/triangle-47852_960_720.png" width="30" height="30"/>	
+                    				</button>
+                    			</td>
+                    			<td style="text-align:center">
+                    				<button name="roll_d6"  type="roll" value="/roll d6" style="font-size:0;height:30px;">
+                    					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/37/die-308887__340.png" width="30" height="30"/>
+                    				</button>
+                    			</td>
+                    			<td style="text-align:center">
+                    				<button name="roll_d8"  type="roll" value="/roll d8" style="font-size:0;height:30px;">
+                    					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024223__340.png" width="30" height="30"/>
+                    				</button>
+                    			</td>
+                    			<td style="text-align:center">
+                    				<button name="roll_d10"  type="roll" value="/roll d10" style="font-size:0;height:30px;">		  
+                    					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/36/dice-308824__340.png" width="30" height="30"/>
+                    				</button>
+                    			</td>
+                    			<td style="text-align:center">
+                    				<button name="roll_d12"  type="roll" value="/roll d12" style="font-size:0;height:30px;">
+                    					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024222__340.png" width="30" height="30"/>
+                    				</button>
+                    			</td>
+                    			<td style="min-width: 60;">
+                    				<button	type="roll" 
+                    					class="blank-roll-button" 
+                    					style="height:20px;"
+                    					value="/roll {[[0+@{d4}]]d4 + [[0+@{d6}]]d6 + [[0+@{d8}]]d8 + [[0+@{d10}]]d10 + [[0+@{d12}]]d12}k2">
+                    				    ROLL
+                    				</button>
+                    			</td>
+                    		</tr>
+                    		<tr>
+                    			<td>
+                    				<input type="number" name="attr_d4" id="attr_d4" min="0" max="99" />
+                    			</td>
+                    			<td>
+                    				<input type="number" name="attr_d6" id="attr_d6" min="0" max="99" />
+                    			</td>
+                    			<td>
+                    				<input type="number" name="attr_d8" id="attr_d8" min="0" max="99" />
+                    			</td>
+                    			<td>
+                    				<input type="number" name="attr_d10" id="attr_d10" min="0" max="99" />
+                    			</td>
+                    			<td>
+                    				<input type="number" name="attr_d12" id="attr_d12" min="0" max="99" />
+                    			</td>
+                    			<td>
+                    				<button	type="roll" 
+                    					class="blank-roll-button" 
+                    					style="height:20px;"
+                    					value="!setattr ?{If you are sure| click Submit} --silent --name @{character_name} --d4|'' --d6|'' --d8|'' --d10|'' --d12|''">
+                    				CLEAR
+                    				</button>
+                    			</td>
+                    		</tr>
+                    	</table>
+            	    </div>
+            		<div class="sheet-col">	
+                    	<table>
+                    	    <tr>
+                                <h3 style="text-align:center">Dice Pool Actions</h3>
+                    	    </tr>
+                    	    <tr>
+                    	        <div style="text-align:center">
+                                    <input type="radio" name="attr_dradio" value="4">
+                                    d4&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="attr_dradio" value="6">
+                                    d6&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="attr_dradio" value="8">
+                                    d8&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="attr_dradio" value="10">
+                                    d10&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="attr_dradio" value="12">
+                                    d12
+                                </div>
+                            </tr>
+                            <tr>
+                    	        <div style="text-align:center">
+                    				<button	type="roll" 
+                    					class="blank-roll-button" 
+                    					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                    					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|1 ">
+                    				2x
+                    				</button>
+                    				<button	type="roll" 
+                    					class="blank-roll-button" 
+                    					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                    					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}+2]]|1 ">
+                    				UP
+                    				</button>
+                    				<button	type="roll" 
+                    					class="blank-roll-button" 
+                    					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                    					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}-2]]|1 ">
+                    				DN
+                    				</button>
+                    				<button	type="roll" 
+                    					class="blank-roll-button" 
+                    					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                    					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}-2]]|2 ">
+                    				/2
+                    				</button>
+                    				<button	type="roll" 
+                    					class="blank-roll-button" 
+                    					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                    					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}-4]]|3 ">
+                    				/3
+                    				</button>
+                    				<button	type="roll" 
+                    					class="blank-roll-button" 
+                    					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                    					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}-6]]|4 ">
+                    				/4
+                    				</button>
+                    				<button	type="roll" 
+                    					class="blank-roll-button" 
+                    					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                    					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-2 --d[[@{dradio}+2]]|1 ">
+                    				2->1
+                    				</button>
+                                </div>
+                            </tr>                        
+                        </table>
+            	    </div>
+        	    </div>
             </div><!-- Dice Bar close --> 
         </div>
         <div class='sheet-npc'>
@@ -528,66 +678,139 @@
             <span>
 
                 <div class='sheet-dice-bar'>
-                	<table>
-                		<tr>
-                			<td style="text-align:center">
-                				<button style="font-size:0;height:30px;"  name="roll_d4"  type="roll" value="/roll d4">	
-                					<img src="https://cdn.pixabay.com/photo/2012/05/07/03/41/triangle-47852_960_720.png" width="30" height="30"/>	
-                				</button>
-                			</td>
-                			<td style="text-align:center">
-                				<button name="roll_d6"  type="roll" value="/roll d6" style="font-size:0;height:30px;">
-                					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/37/die-308887__340.png" width="30" height="30"/>
-                				</button>
-                			</td>
-                			<td style="text-align:center">
-                				<button name="roll_d8"  type="roll" value="/roll d8" style="font-size:0;height:30px;">
-                					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024223__340.png" width="30" height="30"/>
-                				</button>
-                			</td>
-                			<td style="text-align:center">
-                				<button name="roll_d10"  type="roll" value="/roll d10" style="font-size:0;height:30px;">		  
-                					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/36/dice-308824__340.png" width="30" height="30"/>
-                				</button>
-                			</td>
-                			<td style="text-align:center">
-                				<button name="roll_d12"  type="roll" value="/roll d12" style="font-size:0;height:30px;">
-                					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024222__340.png" width="30" height="30"/>
-                				</button>
-                			</td>
-                			<td style="min-width: 60;">
-                				<button	type="roll" 
-                					class="blank-roll-button" 
-                					value="/roll {[[0+@{d4}]]d4 + [[0+@{d6}]]d6 + [[0+@{d8}]]d8 + [[0+@{d10}]]d10 + [[0+@{d12}]]d12}k2">
-                				    ROLL
-                				</button>
-                			</td>
-                		</tr>
-                		<tr>
-                			<td>
-                				<input type="number" name="attr_d4" id="attr_d4" min="0" max="99" />
-                			</td>
-                			<td>
-                				<input type="number" name="attr_d6" id="attr_d6" min="0" max="99" />
-                			</td>
-                			<td>
-                				<input type="number" name="attr_d8" id="attr_d8" min="0" max="99" />
-                			</td>
-                			<td>
-                				<input type="number" name="attr_d10" id="attr_d10" min="0" max="99" />
-                			</td>
-                			<td>
-                				<input type="number" name="attr_d12" id="attr_d12" min="0" max="99" />
-                			</td>
-                			<td>
-                				<button	type="roll" 
-                					class="blank-roll-button" 
-                					value="!setattr ?{If you are sure| click Submit} --silent --name @{character_name} --d4|'' --d6|'' --d8|'' --d10|'' --d12|''" style="height:30px">
-                				CLEAR
-                				</button>
-                			</td>
-                		</tr>
-                	</table>
+                 	<div class="sheet-2colrow">
+                		<div class="sheet-col">	
+                        	<table style="display: inline-block;">
+                        		<tr>
+                        			<td style="text-align:center">
+                        				<button style="font-size:0;height:30px;"  name="roll_d4"  type="roll" value="/roll d4">	
+                        					<img src="https://cdn.pixabay.com/photo/2012/05/07/03/41/triangle-47852_960_720.png" width="30" height="30"/>	
+                        				</button>
+                        			</td>
+                        			<td style="text-align:center">
+                        				<button name="roll_d6"  type="roll" value="/roll d6" style="font-size:0;height:30px;">
+                        					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/37/die-308887__340.png" width="30" height="30"/>
+                        				</button>
+                        			</td>
+                        			<td style="text-align:center">
+                        				<button name="roll_d8"  type="roll" value="/roll d8" style="font-size:0;height:30px;">
+                        					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024223__340.png" width="30" height="30"/>
+                        				</button>
+                        			</td>
+                        			<td style="text-align:center">
+                        				<button name="roll_d10"  type="roll" value="/roll d10" style="font-size:0;height:30px;">		  
+                        					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/36/dice-308824__340.png" width="30" height="30"/>
+                        				</button>
+                        			</td>
+                        			<td style="text-align:center">
+                        				<button name="roll_d12"  type="roll" value="/roll d12" style="font-size:0;height:30px;">
+                        					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024222__340.png" width="30" height="30"/>
+                        				</button>
+                        			</td>
+                        			<td style="min-width: 60;">
+                        				<button	type="roll" 
+                        					class="blank-roll-button" 
+                        					style="height:20px;"
+                        					value="/roll {[[0+@{d4}]]d4 + [[0+@{d6}]]d6 + [[0+@{d8}]]d8 + [[0+@{d10}]]d10 + [[0+@{d12}]]d12}k2">
+                        				    ROLL
+                        				</button>
+                        			</td>
+                        		</tr>
+                        		<tr>
+                        			<td>
+                        				<input type="number" name="attr_d4" id="attr_d4" min="0" max="99" />
+                        			</td>
+                        			<td>
+                        				<input type="number" name="attr_d6" id="attr_d6" min="0" max="99" />
+                        			</td>
+                        			<td>
+                        				<input type="number" name="attr_d8" id="attr_d8" min="0" max="99" />
+                        			</td>
+                        			<td>
+                        				<input type="number" name="attr_d10" id="attr_d10" min="0" max="99" />
+                        			</td>
+                        			<td>
+                        				<input type="number" name="attr_d12" id="attr_d12" min="0" max="99" />
+                        			</td>
+                        			<td>
+                        				<button	type="roll" 
+                        					class="blank-roll-button" 
+                        					style="height:20px;"
+                        					value="!setattr ?{If you are sure| click Submit} --silent --name @{character_name} --d4|'' --d6|'' --d8|'' --d10|'' --d12|''">
+                        				CLEAR
+                        				</button>
+                        			</td>
+                        		</tr>
+                        	</table>
+                	    </div>
+                		<div class="sheet-col">	
+                        	<table>
+                        	    <tr>
+                                    <h3 style="text-align:center">Dice Pool Actions</h3>
+                        	    </tr>
+                        	    <tr>
+                        	        <div style="text-align:center">
+                                        <input type="radio" name="attr_dradio" value="4">
+                                        d4&nbsp;&nbsp;&nbsp;
+                                        <input type="radio" name="attr_dradio" value="6">
+                                        d6&nbsp;&nbsp;&nbsp;
+                                        <input type="radio" name="attr_dradio" value="8">
+                                        d8&nbsp;&nbsp;&nbsp;
+                                        <input type="radio" name="attr_dradio" value="10">
+                                        d10&nbsp;&nbsp;&nbsp;
+                                        <input type="radio" name="attr_dradio" value="12">
+                                        d12
+                                    </div>
+                                </tr>
+                                <tr>
+                        	        <div style="text-align:center">
+                        				<button	type="roll" 
+                        					class="blank-roll-button" 
+                        					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|1 ">
+                        				2x
+                        				</button>
+                        				<button	type="roll" 
+                        					class="blank-roll-button" 
+                        					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}+2]]|1 ">
+                        				UP
+                        				</button>
+                        				<button	type="roll" 
+                        					class="blank-roll-button" 
+                        					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}-2]]|1 ">
+                        				DN
+                        				</button>
+                        				<button	type="roll" 
+                        					class="blank-roll-button" 
+                        					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}-2]]|2 ">
+                        				/2
+                        				</button>
+                        				<button	type="roll" 
+                        					class="blank-roll-button" 
+                        					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}-4]]|3 ">
+                        				/3
+                        				</button>
+                        				<button	type="roll" 
+                        					class="blank-roll-button" 
+                        					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}-6]]|4 ">
+                        				/4
+                        				</button>
+                        				<button	type="roll" 
+                        					class="blank-roll-button" 
+                        					style="width:30px;height:15px;padding:1px;font-size:13px;"
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-2 --d[[@{dradio}+2]]|1 ">
+                        				2->1
+                        				</button>
+                                    </div>
+                                </tr>                        
+                            </table>
+                	    </div>
+            	    </div>
                 </div><!-- Dice Bar close --> 
                 <hr class="myhrline"/>
                 
