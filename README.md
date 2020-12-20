@@ -1,14 +1,12 @@
 # CortexPrime
 Character sheet(s) for Cortex Prime focusing on a Cortex Plus Marvel Heroic-compatible implementation.
-The top of the sheet is a dice pool roller application. 
+The dice pool controls are at the top of the character sheets. They are inspired in part by the DiceStream app that was once available in Google Hangouts. 
 Buttons on the sheet add dice to your pool, or you can add them in the roller itself.
 The d20 button in the roller rolls your dice into the chat.
 The sheet requires the ChatSetAttr API script to function properly.
 
-THE DICE POOL APP
-The dice pool app is at the top of the character sheets. It is inspired in part by the DiceStream app that was once available in Google Hangouts. 
-
-The controls are fairly simple:
+The Dice Pool
+The controls on the left are the dice pool itself and the buttons to manually add, remove, roll, and clear dice.
 
 To roll any single die, click on the picture of that die. That die will be rolled in the Roll20 Chat window.
 
@@ -18,25 +16,28 @@ Once you've selected how many of each type of die you want in your pool, press t
 
 There is also a CLEAR button to clear your old pool, or clear the pool if you need to start fresh. The CLEAR button has a pop up "Are you sure" window to avoid inadvertently erasing a nice large dice pool you have just lovingly created.
 
-That's it. It's pretty simple. The character sheets themselves have additional interfaces to the dice pool roller that are explained in their handouts.
+The Dice Pool Actions
+The controls on the right are for dice pool manipulation according to the Cortex System rules. The radio buttons in the top row are selected first, then the appropriate action button is clicked.
 
-Also, in the event that you just want to use ROLL20 and this pool dice roller and not the specific character sheets, there is a Dice Roller Only button available for just that scenario. I use a Dice Roller Only character for my Doom Pool.
+NOTE: These dice pool functions do not check to confirm that you have the right dice already in your pool to take these actions. As such, it is up to you to make sure you don't click an action button when there are not enough dice of the selected size in the pool to complete that action. Doing so can produce "spurious" results.
+The buttons are
 
-THE CHARACTER SHEET
-The MHRP Character Sheet allows the player to step through their character details, selecting dice that are relevant to their current action, then roll their dice pool.
-When you create the character, you enter all the Distinctions, Powers, SFX, Limits, Specialties, Milestones for your character, and set all of the die sizes for your Affiliations, Powers, and Specialties.
+2X - Doubles a die of the selected size. This function should only be used when there is at least one of the selected dice in the pool.
 
-To build a dice pool, clicking the "ADD" button adds a trait die to the dice pool roller above the sheet. The only exception is the Distinctions. Since they can be taken as either a d8 or a d4 (to earn a PP), they have a d8 and d4 picture button to select which you want to add to your pool.
+UP - Steps Up a die of the selected size. This function should only be used when there is at least one of the selected dice in the pool. Stepping up a d12 results in a d12 being replaced with a d12 and a d6.
 
-Once you've selected all of your dice, you can manually edit your dice pool to implement any SFX or Limits (stepping up or down, doubling dice, etc.), or to add any external Complication, Stress, Scene Distinction, Asset, Resource, Push, or Stunt dice.
+DN - Steps Down a die of the selected size. This function should only be used when there is at least one of the selected dice in the pool. Stepping down a d4 removes it from the pool.
 
-At the top of the sheet there are 4 check boxes. These hide or reveal the 3 Power Sets and the Milestones. This is to simplify the appearance for characters that only have 1 or 2 Power Sets. Often, when running one-shot games we do not use Milestones, so I made them hide-able as well to give people more options when managing limited screen space in Roll20.
+/2 - Split a Die into Two Smaller Dice. This function removes a die and replaces it with 2 dice one step down. Using this on a d4 just removes it from the pool.
 
-For Powers, SFX and Limits, and Specialties, only the first row exists on a new blank character sheet. The "+Add" button allows you to add new rows of powers, etc. depending on how many the character needs. The "Modify" button will allow you to delete unneeded rows, or to reorder existing rows (except for the first).
+/3 - Split a Die into Three Smaller Dice. This function removes a die and replaces it with 3 dice two steps down. Using this on a d4 or d6 just removes it from the pool.
 
-Do not confuse the "+Add" button for adding rows with the "ADD" button for adding a trait's die to your dice pool.
+/4 - Split a Die into Four Smaller Dice. This function removes a die and replaces it with 4 dice three steps down. Using this on a d4, d6, or d8 just removes it from the pool.
 
-I have not integrated Plot Points, nor temporary traits (Stress, Complications, Stunts, etc.) into the sheet. We are using Roll20 card decks to implement these. See the "Plot Points and Temporary Trait Dice" handout for more details.
+2->1 - Combine Two Dice Into a Larger Die. This function removes 2 dice and replaces them with 1 die one step up. Using this on a pair of d12s just removes them from the pool. 
 
-In addition to the character sheet and the dice roller only sheet, there is an NPC sheet button. This uses all the same conventions, but I have added a multiplier entry in front of the Affiliation dice. This allows for NPC mob or LST dice. For example, the Copy of Nebula's Mercs (NPC MOB) is a 4d8 mob, which you can see in their Solo affiliation if you select the NPC Sheet button at the top when viewing them.
 
+
+The character sheets themselves have additional interfaces to the dice pool roller that are explained in their handouts.
+
+Also, in the event that you just want to use ROLL20 and this pool dice roller and not the specific character sheets, there is a Dice Roller Only button available for just that scenario. I use a Dice Roller Only as a "character sheet" for my Doom Pool.
