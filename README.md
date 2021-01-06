@@ -40,4 +40,4 @@ DN - Steps Down a die of the selected size. This function should only be used wh
 
 The character sheets themselves have additional interfaces to the dice pool roller that are explained in their handouts.
 
-Also, in the event that you just want to use ROLL20 and this pool dice roller and not the specific character sheets, there is a Dice Roller Only button available for just that scenario. I use a Dice Roller Only as a "character sheet" for my Doom Pool.
+Also, in the event that you just want to use ROLL20 and this dice pool roller and not the specific character sheets, there is a Dice Pool Roller Only button available for just that scenario. I use a Dice Pool Roller Only as a "character sheet" for my Doom Pool.
