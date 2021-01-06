@@ -18,6 +18,7 @@ Once you've selected how many of each type of die you want in your pool, press t
 There is also a CLEAR button to clear your old pool, or clear the pool if you need to start fresh. The CLEAR button has a pop up "Are you sure" window to avoid inadvertently erasing a nice large dice pool you have just lovingly created.
 
 The Dice Pool Actions
+
 The controls on the right are for dice pool manipulation according to the Cortex System rules. The radio buttons in the top row are selected first, then the appropriate action button is clicked.
 
 NOTE: These dice pool functions do not check to confirm that you have the right dice already in your pool to take these actions. As such, it is up to you to make sure you don't click an action button when there are not enough dice of the selected size in the pool to complete that action. Doing so can produce "spurious" results.
