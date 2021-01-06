@@ -1,5 +1,6 @@
 # CortexPrime
-Character sheet(s) for Cortex Prime focusing on a Cortex Plus Marvel Heroic-compatible implementation.
+Character sheet(s) for Cortex Prime focusing on a Cortex Plus Marvel Heroic-compatible implementation. To see an example of how it all works, check out the Roll20 game at: https://app.roll20.net/join/9344152/nM9tKQ
+
 The dice pool controls are at the top of the character sheets. They are inspired in part by the DiceStream app that was once available in Google Hangouts. 
 Buttons on the sheet add dice to your pool, or you can add them in the roller itself.
 The d20 button in the roller rolls your dice into the chat.
@@ -62,3 +63,34 @@ Do not confuse the "+Add" button for adding rows with the "ADD" button for addin
 I have not integrated Plot Points, nor temporary traits (Stress, Complications, Stunts, etc.) into the sheet. We are using Roll20 card decks to implement these. See the "Plot Points and Temporary Trait Dice" handout for more details.
 
 In addition to the character sheet and the dice roller only sheet, there is an NPC sheet button. This uses all the same conventions, but I have added a multiplier entry in front of the Affiliation dice. This allows for NPC mob or LST dice. For example, the Copy of Nebula's Mercs (NPC MOB) is a 4d8 mob, which you can see in their Solo affiliation if you select the NPC Sheet button at the top when viewing them.
+
+Plot Points and Temporary Trait Dice (Stress, Complications, etc.)
+
+In my games, we don't use the character sheets to manage plot points and temporary traits like stress. We do these with the Roll20 card decks. We use 2 decks.
+
+The first is our Plot Points deck.
+
+The cards have the Avengers logo front and back and the deck is an infinite supply of them.
+
+To take a PP, simply pull a card from the deck and drop it on your player avatar/name at the bottom of the Roll20 screen.
+
+Above each player's avatar you will see a copy of the PP card image and the number of PP they currently have.
+
+To spend a PP, click on the card image above your avatar to open the window, drag a PP card onto the virtual table top, then click the card image again to close the PP window.
+
+Because we used cards for this application, if the Watcher wants to retain control of when PP are taken, they can change the permissions on the deck to only allow the GM to deal cards, i.e. hand out PP.
+
+The second is our dice deck.
+
+This deck contains cards for all of the dice that represent temporary traits that come and go during a game session. The image files for these cards are in this file repository. 
+(We did not create Distinction cards for Scene Distinctions because we use a simple text box to convey those.)
+
+To add one to the game, hover over the deck and click "Choose". This opens a window of all the cards and allows the user to drag one onto the virtual tabletop.
+
+Unlike the PP cards, which are just images, these cards are implmeneted as tokens, so they can be given names and show those names on a nameplate.
+
+In our game, I have enabled the permission to allow players to pull those cards and to change their names so that they can name their assets, complications, etc.
+
+The cards are color coded by type and include some non-MHRP types (like Hero dice) for use in other Cortex Classic/Plus/Prime games.
+
+A common problem we have experienced is forgetting to use stress, complications, etc. These cards are brightly colored to draw attention to themselves so players remember to use those dice in their pools. 
