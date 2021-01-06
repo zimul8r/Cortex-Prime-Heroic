@@ -6,6 +6,7 @@ The d20 button in the roller rolls your dice into the chat.
 The sheet requires the ChatSetAttr API script to function properly.
 
 The Dice Pool
+
 The controls on the left are the dice pool itself and the buttons to manually add, remove, roll, and clear dice.
 
 To roll any single die, click on the picture of that die. That die will be rolled in the Roll20 Chat window.
