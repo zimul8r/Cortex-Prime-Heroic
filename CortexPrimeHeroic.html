@@ -24,27 +24,27 @@
                         		<tr>
                         			<td style="text-align:center">
                         				<button style="font-size:0;height:30px;"  name="roll_d4"  type="roll" value="/roll d4">	
-                        					<img src="https://cdn.pixabay.com/photo/2012/05/07/03/41/triangle-47852_960_720.png" width="30" height="30"/>	
+                        					<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d4R.png?raw=true" width="30" height="30"/>	
                         				</button>
                         			</td>
                         			<td style="text-align:center">
                         				<button name="roll_d6"  type="roll" value="/roll d6" style="font-size:0;height:30px;">
-                        					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/37/die-308887__340.png" width="30" height="30"/>
+                        					<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d6O.png?raw=true" width="30" height="30"/>
                         				</button>
                         			</td>
                         			<td style="text-align:center">
                         				<button name="roll_d8"  type="roll" value="/roll d8" style="font-size:0;height:30px;">
-                        					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024223__340.png" width="30" height="30"/>
+                        					<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d8Y.png?raw=true" width="30" height="30"/>
                         				</button>
                         			</td>
                         			<td style="text-align:center">
                         				<button name="roll_d10"  type="roll" value="/roll d10" style="font-size:0;height:30px;">		  
-                        					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/36/dice-308824__340.png" width="30" height="30"/>
+                        					<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d10G.png?raw=true" width="30" height="30"/>
                         				</button>
                         			</td>
                         			<td style="text-align:center">
                         				<button name="roll_d12"  type="roll" value="/roll d12" style="font-size:0;height:30px;">
-                        					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024222__340.png" width="30" height="30"/>
+                        					<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d12P.png?raw=true" width="30" height="30"/>
                         				</button>
                         			</td>
                         			<td style="min-width: 60;">
@@ -105,42 +105,49 @@
                                 <tr>
                         	        <div style="text-align:center">
                         				<button	type="roll" 
+                        				    title="Double a die"
                         					class="blank-roll-button" 
                         					style="width:30px;height:15px;padding:1px;font-size:13px;"
                         					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|1 ">
                         				2x
                         				</button>
                         				<button	type="roll" 
+                        				    title="Step Up a die"
                         					class="blank-roll-button" 
                         					style="width:30px;height:15px;padding:1px;font-size:13px;"
                         					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|-1 --d[[@{dcharradio}+2]]|1 ">
                         				UP
                         				</button>
                         				<button	type="roll" 
+                        				    title="Step Down a die"
                         					class="blank-roll-button" 
                         					style="width:30px;height:15px;padding:1px;font-size:13px;"
                         					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|-1 --d[[@{dcharradio}-2]]|1 ">
                         				DN
                         				</button>
                         				<button	type="roll" 
+                        				    title="Split into 2 dice one step lower"
                         					class="blank-roll-button" 
                         					style="width:30px;height:15px;padding:1px;font-size:13px;"
                         					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|-1 --d[[@{dcharradio}-2]]|2 ">
                         				/2
                         				</button>
                         				<button	type="roll" 
+                        				    title="Split into 3 dice two steps lower"
                         					class="blank-roll-button" 
                         					style="width:30px;height:15px;padding:1px;font-size:13px;"
                         					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|-1 --d[[@{dcharradio}-4]]|3 ">
                         				/3
                         				</button>
                         				<button	type="roll" 
+                        				    title="Split into 4 dice three steps lower"
                         					class="blank-roll-button" 
                         					style="width:30px;height:15px;padding:1px;font-size:13px;"
                         					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|-1 --d[[@{dcharradio}-6]]|4 ">
                         				/4
                         				</button>
                         				<button	type="roll" 
+                        				    title="Combine 2 dice into 1 die one step higher"
                         					class="blank-roll-button" 
                         					style="width:30px;height:15px;padding:1px;font-size:13px;"
                         					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|-2 --d[[@{dcharradio}+2]]|1 ">
@@ -223,30 +230,30 @@
                             <div>
                             	<input style="width: 65%" type="text" name="attr_Dist1" />
                             	<button name="attr_Dist1_d8"  type="roll" value="!setattr --silent --name @{character_name} --mod --d8|1" style="font-size:0;height:28px;">
-                            		<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024223__340.png" width="28" height="28"/>
+                            		<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d8Y.png?raw=true" width="28" height="28"/>
                             	</button>
                             	<button style="font-size:0;height:28px;"  name="attr_Dist1_d4"  type="roll" value="!setattr --silent --name @{character_name} --mod --d4|1">	
-                            		<img src="https://cdn.pixabay.com/photo/2012/05/07/03/41/triangle-47852_960_720.png" width="28" height="28"/>	
+                            		<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d4R.png?raw=true" width="28" height="28"/>	
                             	</button>
                             	<span>+1 PP</span>
                             </div>
                             <div>
                             	<input style="width: 65%" type="text" name="attr_Dist2" />
                             	<button name="attr_Dist2_d8"  type="roll" value="!setattr --silent --name @{character_name} --mod --d8|1" style="font-size:0;height:28px;">
-                            		<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024223__340.png" width="28" height="28"/>
+                            		<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d8Y.png?raw=true" width="28" height="28"/>
                             	</button>
                             	<button style="font-size:0;height:28px;"  name="attr_Dist2_d4"  type="roll" value="!setattr --silent --name @{character_name} --mod --d4|1">	
-                            		<img src="https://cdn.pixabay.com/photo/2012/05/07/03/41/triangle-47852_960_720.png" width="28" height="28"/>	
+                            		<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d4R.png?raw=true" width="28" height="28"/>	
                             	</button>
                             	<span>+1 PP</span>
                             </div>
                             <div>
                             	<input style="width: 65%" type="text" name="attr_Dist3" />
                             	<button name="attr_Dist3_d8"  type="roll" value="!setattr --silent --name @{character_name} --mod --d8|1" style="font-size:0;height:28px;">
-                            		<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024223__340.png" width="28" height="28"/>
+                            		<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d8Y.png?raw=true" width="28" height="28"/>
                             	</button>
                             	<button style="font-size:0;height:28px;"  name="attr_Dist3_d4"  type="roll" value="!setattr --silent --name @{character_name} --mod --d4|1">	
-                            		<img src="https://cdn.pixabay.com/photo/2012/05/07/03/41/triangle-47852_960_720.png" width="28" height="28"/>	
+                            		<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d4R.png?raw=true" width="28" height="28"/>	
                             	</button>
                             	<span>+1 PP</span>
                             </div>
@@ -274,6 +281,7 @@
                                     			<option value="d8">d8</option>
                                     			<option value="d10">d10</option>
                                     			<option value="d12">d12</option>
+                                    			<option value="Shutdown">OFF</option>
                                     		</select>
                                     		<button	type="roll" 
                                     			class="blank-roll-button" 
@@ -317,6 +325,7 @@
                                     			<option value="d8">d8</option>
                                     			<option value="d10">d10</option>
                                     			<option value="d12">d12</option>
+                                    			<option value="Shutdown">OFF</option>
                                     		</select>
                                     		<button	type="roll" 
                                     			class="blank-roll-button" 
@@ -359,6 +368,7 @@
                                     			<option value="d8">d8</option>
                                     			<option value="d10">d10</option>
                                     			<option value="d12">d12</option>
+                                    			<option value="Shutdown">OFF</option>
                                     		</select>
                                     		<button	type="roll" 
                                     			class="blank-roll-button" 
@@ -465,27 +475,27 @@
                     		<tr>
                     			<td style="text-align:center">
                     				<button style="font-size:0;height:30px;"  name="roll_d4"  type="roll" value="/roll d4">	
-                    					<img src="https://cdn.pixabay.com/photo/2012/05/07/03/41/triangle-47852_960_720.png" width="30" height="30"/>	
+                    					<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d4R.png?raw=true" width="30" height="30"/>	
                     				</button>
                     			</td>
                     			<td style="text-align:center">
                     				<button name="roll_d6"  type="roll" value="/roll d6" style="font-size:0;height:30px;">
-                    					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/37/die-308887__340.png" width="30" height="30"/>
+                    					<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d6O.png?raw=true" width="30" height="30"/>
                     				</button>
                     			</td>
                     			<td style="text-align:center">
                     				<button name="roll_d8"  type="roll" value="/roll d8" style="font-size:0;height:30px;">
-                    					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024223__340.png" width="30" height="30"/>
+                    					<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d8Y.png?raw=true" width="30" height="30"/>
                     				</button>
                     			</td>
                     			<td style="text-align:center">
                     				<button name="roll_d10"  type="roll" value="/roll d10" style="font-size:0;height:30px;">		  
-                    					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/36/dice-308824__340.png" width="30" height="30"/>
+                    					<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d10G.png?raw=true" width="30" height="30"/>
                     				</button>
                     			</td>
                     			<td style="text-align:center">
                     				<button name="roll_d12"  type="roll" value="/roll d12" style="font-size:0;height:30px;">
-                    					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024222__340.png" width="30" height="30"/>
+                    					<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d12P.png?raw=true" width="30" height="30"/>
                     				</button>
                     			</td>
                     			<td style="min-width: 60;">
@@ -511,7 +521,7 @@
                     				<input type="number" name="attr_d10" min="0" max="99" />
                     			</td>
                     			<td>
-                    				<input type="number" name="attr_d12"  min="0" max="99" />
+                    				<input type="number" name="attr_d12" min="0" max="99" />
                     			</td>
                     			<td>
                     				<button	type="roll" 
@@ -531,60 +541,67 @@
                     	    </tr>
                     	    <tr>
                     	        <div style="text-align:center">
-                                    <input type="radio" name="attr_dradio" value="4">
+                                    <input type="radio" name="attr_dcharradio" value="4">
                                     d4&nbsp;&nbsp;&nbsp;
-                                    <input type="radio" name="attr_dradio" value="6">
+                                    <input type="radio" name="attr_dcharradio" value="6">
                                     d6&nbsp;&nbsp;&nbsp;
-                                    <input type="radio" name="attr_dradio" value="8">
+                                    <input type="radio" name="attr_dcharradio" value="8">
                                     d8&nbsp;&nbsp;&nbsp;
-                                    <input type="radio" name="attr_dradio" value="10">
+                                    <input type="radio" name="attr_dcharradio" value="10">
                                     d10&nbsp;&nbsp;&nbsp;
-                                    <input type="radio" name="attr_dradio" value="12">
+                                    <input type="radio" name="attr_dcharradio" value="12">
                                     d12
                                 </div>
                             </tr>
                             <tr>
                     	        <div style="text-align:center">
                     				<button	type="roll" 
+                    				    title="Double a die"
                     					class="blank-roll-button" 
                     					style="width:30px;height:15px;padding:1px;font-size:13px;"
-                    					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|1 ">
+                    					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|1 ">
                     				2x
                     				</button>
                     				<button	type="roll" 
+                    				    title="Step Up a die"
                     					class="blank-roll-button" 
                     					style="width:30px;height:15px;padding:1px;font-size:13px;"
-                    					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}+2]]|1 ">
+                    					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|-1 --d[[@{dcharradio}+2]]|1 ">
                     				UP
                     				</button>
                     				<button	type="roll" 
+                    				    title="Step Down a die"
                     					class="blank-roll-button" 
                     					style="width:30px;height:15px;padding:1px;font-size:13px;"
-                    					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}-2]]|1 ">
+                    					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|-1 --d[[@{dcharradio}-2]]|1 ">
                     				DN
                     				</button>
                     				<button	type="roll" 
+                    				    title="Split into 2 dice one step lower"
                     					class="blank-roll-button" 
                     					style="width:30px;height:15px;padding:1px;font-size:13px;"
-                    					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}-2]]|2 ">
+                    					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|-1 --d[[@{dcharradio}-2]]|2 ">
                     				/2
                     				</button>
                     				<button	type="roll" 
+                    				    title="Split into 3 dice two steps lower"
                     					class="blank-roll-button" 
                     					style="width:30px;height:15px;padding:1px;font-size:13px;"
-                    					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}-4]]|3 ">
+                    					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|-1 --d[[@{dcharradio}-4]]|3 ">
                     				/3
                     				</button>
                     				<button	type="roll" 
+                    				    title="Split into 4 dice three steps lower"
                     					class="blank-roll-button" 
                     					style="width:30px;height:15px;padding:1px;font-size:13px;"
-                    					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-1 --d[[@{dradio}-6]]|4 ">
+                    					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|-1 --d[[@{dcharradio}-6]]|4 ">
                     				/4
                     				</button>
                     				<button	type="roll" 
+                    				    title="Combine 2 dice into 1 die one step higher"
                     					class="blank-roll-button" 
                     					style="width:30px;height:15px;padding:1px;font-size:13px;"
-                    					value="!setattr --silent --name @{character_name} --mod --d@{dradio}|-2 --d[[@{dradio}+2]]|1 ">
+                    					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|-2 --d[[@{dcharradio}+2]]|1 ">
                     				2->1
                     				</button>
                                 </div>
@@ -597,7 +614,6 @@
         <div class='sheet-npc'>
             <h2>NPC Sheet</h2>
             <span>
-
                 <div class='sheet-dice-bar'>
                  	<div class="sheet-2colrow">
                 		<div class="sheet-col">	
@@ -605,27 +621,27 @@
                         		<tr>
                         			<td style="text-align:center">
                         				<button style="font-size:0;height:30px;"  name="roll_d4"  type="roll" value="/roll d4">	
-                        					<img src="https://cdn.pixabay.com/photo/2012/05/07/03/41/triangle-47852_960_720.png" width="30" height="30"/>	
+                        					<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d4R.png?raw=true" width="30" height="30"/>	
                         				</button>
                         			</td>
                         			<td style="text-align:center">
                         				<button name="roll_d6"  type="roll" value="/roll d6" style="font-size:0;height:30px;">
-                        					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/37/die-308887__340.png" width="30" height="30"/>
+                        					<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d6O.png?raw=true" width="30" height="30"/>
                         				</button>
                         			</td>
                         			<td style="text-align:center">
                         				<button name="roll_d8"  type="roll" value="/roll d8" style="font-size:0;height:30px;">
-                        					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024223__340.png" width="30" height="30"/>
+                        					<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d8Y.png?raw=true" width="30" height="30"/>
                         				</button>
                         			</td>
                         			<td style="text-align:center">
                         				<button name="roll_d10"  type="roll" value="/roll d10" style="font-size:0;height:30px;">		  
-                        					<img src="https://cdn.pixabay.com/photo/2014/04/03/00/36/dice-308824__340.png" width="30" height="30"/>
+                        					<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d10G.png?raw=true" width="30" height="30"/>
                         				</button>
                         			</td>
                         			<td style="text-align:center">
                         				<button name="roll_d12"  type="roll" value="/roll d12" style="font-size:0;height:30px;">
-                        					<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024222__340.png" width="30" height="30"/>
+                        					<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d12P.png?raw=true" width="30" height="30"/>
                         				</button>
                         			</td>
                         			<td style="min-width: 60;">
@@ -671,60 +687,67 @@
                         	    </tr>
                         	    <tr>
                         	        <div style="text-align:center">
-                                        <input type="radio" name="attr_dnpcradio" value="4">
+                                        <input type="radio" name="attr_dcharradio" value="4">
                                         d4&nbsp;&nbsp;&nbsp;
-                                        <input type="radio" name="attr_dnpcradio" value="6">
+                                        <input type="radio" name="attr_dcharradio" value="6">
                                         d6&nbsp;&nbsp;&nbsp;
-                                        <input type="radio" name="attr_dnpcradio" value="8">
+                                        <input type="radio" name="attr_dcharradio" value="8">
                                         d8&nbsp;&nbsp;&nbsp;
-                                        <input type="radio" name="attr_dnpcradio" value="10">
+                                        <input type="radio" name="attr_dcharradio" value="10">
                                         d10&nbsp;&nbsp;&nbsp;
-                                        <input type="radio" name="attr_dnpcradio" value="12">
+                                        <input type="radio" name="attr_dcharradio" value="12">
                                         d12
                                     </div>
                                 </tr>
                                 <tr>
                         	        <div style="text-align:center">
                         				<button	type="roll" 
+                        				    title="Double a die"
                         					class="blank-roll-button" 
                         					style="width:30px;height:15px;padding:1px;font-size:13px;"
-                        					value="!setattr --silent --name @{character_name} --mod --d@{dnpcradio}|1 ">
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|1 ">
                         				2x
                         				</button>
                         				<button	type="roll" 
+                        				    title="Step Up a die"
                         					class="blank-roll-button" 
                         					style="width:30px;height:15px;padding:1px;font-size:13px;"
-                        					value="!setattr --silent --name @{character_name} --mod --d@{dnpcradio}|-1 --d[[@{dnpcradio}+2]]|1 ">
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|-1 --d[[@{dcharradio}+2]]|1 ">
                         				UP
                         				</button>
                         				<button	type="roll" 
+                        				    title="Step Down a die"
                         					class="blank-roll-button" 
                         					style="width:30px;height:15px;padding:1px;font-size:13px;"
-                        					value="!setattr --silent --name @{character_name} --mod --d@{dnpcradio}|-1 --d[[@{dnpcradio}-2]]|1 ">
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|-1 --d[[@{dcharradio}-2]]|1 ">
                         				DN
                         				</button>
                         				<button	type="roll" 
+                        				    title="Split into 2 dice one step lower"
                         					class="blank-roll-button" 
                         					style="width:30px;height:15px;padding:1px;font-size:13px;"
-                        					value="!setattr --silent --name @{character_name} --mod --d@{dnpcradio}|-1 --d[[@{dnpcradio}-2]]|2 ">
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|-1 --d[[@{dcharradio}-2]]|2 ">
                         				/2
                         				</button>
                         				<button	type="roll" 
+                        				    title="Split into 3 dice two steps lower"
                         					class="blank-roll-button" 
                         					style="width:30px;height:15px;padding:1px;font-size:13px;"
-                        					value="!setattr --silent --name @{character_name} --mod --d@{dnpcradio}|-1 --d[[@{dnpcradio}-4]]|3 ">
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|-1 --d[[@{dcharradio}-4]]|3 ">
                         				/3
                         				</button>
                         				<button	type="roll" 
+                        				    title="Split into 4 dice three steps lower"
                         					class="blank-roll-button" 
                         					style="width:30px;height:15px;padding:1px;font-size:13px;"
-                        					value="!setattr --silent --name @{character_name} --mod --d@{dnpcradio}|-1 --d[[@{dnpcradio}-6]]|4 ">
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|-1 --d[[@{dcharradio}-6]]|4 ">
                         				/4
                         				</button>
                         				<button	type="roll" 
+                        				    title="Combine 2 dice into 1 die one step higher"
                         					class="blank-roll-button" 
                         					style="width:30px;height:15px;padding:1px;font-size:13px;"
-                        					value="!setattr --silent --name @{character_name} --mod --d@{dnpcradio}|-2 --d[[@{dnpcradio}+2]]|1 ">
+                        					value="!setattr --silent --name @{character_name} --mod --d@{dcharradio}|-2 --d[[@{dcharradio}+2]]|1 ">
                         				2->1
                         				</button>
                                     </div>
@@ -805,30 +828,30 @@
                             <div>
                             	<input style="width: 65%" type="text" name="attr_Dist1" />
                             	<button name="attr_Dist1_d8"  type="roll" value="!setattr --silent --name @{character_name} --mod --d8|1" style="font-size:0;height:28px;">
-                            		<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024223__340.png" width="28" height="28"/>
+                            		<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d8Y.png?raw=true" width="28" height="28"/>
                             	</button>
                             	<button style="font-size:0;height:28px;"  name="attr_Dist1_d4"  type="roll" value="!setattr --silent --name @{character_name} --mod --d4|1">	
-                            		<img src="https://cdn.pixabay.com/photo/2012/05/07/03/41/triangle-47852_960_720.png" width="28" height="28"/>	
+                            		<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d4R.png?raw=true" width="28" height="28"/>	
                             	</button>
                             	<span>+1 PP</span>
                             </div>
                             <div>
                             	<input style="width: 65%" type="text" name="attr_Dist2" />
                             	<button name="attr_Dist2_d8"  type="roll" value="!setattr --silent --name @{character_name} --mod --d8|1" style="font-size:0;height:28px;">
-                            		<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024223__340.png" width="28" height="28"/>
+                            		<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d8Y.png?raw=true" width="28" height="28"/>
                             	</button>
                             	<button style="font-size:0;height:28px;"  name="attr_Dist2_d4"  type="roll" value="!setattr --silent --name @{character_name} --mod --d4|1">	
-                            		<img src="https://cdn.pixabay.com/photo/2012/05/07/03/41/triangle-47852_960_720.png" width="28" height="28"/>	
+                            		<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d4R.png?raw=true" width="28" height="28"/>	
                             	</button>
                             	<span>+1 PP</span>
                             </div>
                             <div>
                             	<input style="width: 65%" type="text" name="attr_Dist3" />
                             	<button name="attr_Dist3_d8"  type="roll" value="!setattr --silent --name @{character_name} --mod --d8|1" style="font-size:0;height:28px;">
-                            		<img src="https://cdn.pixabay.com/photo/2017/01/31/13/51/dice-2024223__340.png" width="28" height="28"/>
+                            		<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d8Y.png?raw=true" width="28" height="28"/>
                             	</button>
                             	<button style="font-size:0;height:28px;"  name="attr_Dist3_d4"  type="roll" value="!setattr --silent --name @{character_name} --mod --d4|1">	
-                            		<img src="https://cdn.pixabay.com/photo/2012/05/07/03/41/triangle-47852_960_720.png" width="28" height="28"/>	
+                            		<img src="https://github.com/zimul8r/Cortex-Prime-Heroic/blob/main/d4R.png?raw=true" width="28" height="28"/>	
                             	</button>
                             	<span>+1 PP</span>
                             </div>
